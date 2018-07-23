@@ -1,5 +1,3 @@
-Design Document
-
 #Streaks
 Streaks is an iOS mobile application that enables users to better their lifestyles by motivating them to complete daily lifestyle streaks for positive habits and share them with their friends.
 
