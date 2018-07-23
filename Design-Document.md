@@ -30,20 +30,18 @@ Firebase:
 	* Password (String)
 	* Challenges
 
-
 Streaks will save users basic profile information (name, username, password, email) and their challenge progress (streak start, streak end, current streak, max streak). ADDITIONAL FEATURE: Streaks will store list of friends and display their streaks in comparison to yours.
 
 ## Views
 
-
-ListChallengeTableViewCell
+`ListChallengeTableViewCell.swift`
 * Current Streak (Label)
 * Max Streak (Label)
 * Icon (UIImage)
 * Challenge Name (Label)
 * Completed Icon (UIImage)
 
-ListNewChallengeTableViewCell
+`ListNewChallengeTableViewCell.swift`
 * Current Streak (Label)
 * Max Streak (Label)
 * Icon (UIImage)
