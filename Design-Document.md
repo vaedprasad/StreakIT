@@ -54,7 +54,7 @@ ListNewChallengeTableViewCell
 
 Login/Create-Username View Controllers
 
-* 3 Tab View Controller (TabBarViewController.swift)
+* 3 Tab View Controller ('TabBarViewController.swift')
 * Home: View all challenges (ListChallengesViewController.swift)
 * Detail: When challenge is tapped open detail view of challenge including description (ChallengeDetailViewController.swift)
 * New Challenge: When challenge is tapped
