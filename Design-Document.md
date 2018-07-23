@@ -53,12 +53,21 @@ ListNewChallengeTableViewCell
 ## Controllers / Routes
 
 Login/Create-Username View Controllers
-
-* 3 Tab View Controller ('TabBarViewController.swift')
-* Home: View all challenges (ListChallengesViewController.swift)
-* Detail: When challenge is tapped open detail view of challenge including description (ChallengeDetailViewController.swift)
-* New Challenge: When challenge is tapped
-
+* `LoginViewController.swift`
+	*  User can login using Firebase Authentication
+* `TabBarViewController.swift`
+	*  3 Tab View Controller
+* `ListChallengesTableViewController.swift`
+	* User can view all their active challenges
+* `ChallengeDetailViewController.swift`
+	* When challenge is tapped open detail view of challenge including description
+* `ListNewChallengesTableViewController.swift`
+	* Presents user with list of default presets for challenges as well as the ability to create their own challenge
+* `NewPresetChallengeDetailViewController.swift`
+	* Opens detail view for preset challenge for user to add
+* `NewCustomChallengeDetailViewController.swift`
+	* Opens detail view for custom challenge where user can insert name, description, and icon
+	
 ## Other
 
 Pending available time I will implement a social aspect to streaks where users can add friends and can compete with each other on streaks
