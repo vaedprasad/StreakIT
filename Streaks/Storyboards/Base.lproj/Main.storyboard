@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YOF-EI-qS2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Complete Challenges View Controller-->
+        <scene sceneID="Me9-g6-raT">
+            <objects>
+                <viewController id="Yga-w6-dz1" customClass="CompleteChallengesViewController" customModule="Streaks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ym-aS-pv2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eID-ya-Ywe" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="67" y="69" width="240" height="337"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="stkCyan"/>
+                        <viewLayoutGuide key="safeArea" id="yUo-MO-rNP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_profile_black" id="drN-i8-J9J">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="kolodaView" destination="eID-ya-Ywe" id="3sb-Np-msJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQl-4I-ykr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="249.62518740629687"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eOC-QR-92h">
+            <objects>
+                <viewController id="hoe-ht-Ler" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSD-vg-6L4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CHH-eM-CeV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="RCe-Dl-lLn">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T88-ob-Mi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="893"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EDv-C4-JvH">
+            <objects>
+                <tabBarController id="YOF-EI-qS2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k1h-Uy-t2S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="stkSeafoamGreen"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ztQ-4d-xiS" kind="relationship" relationship="viewControllers" id="93a-33-GZW"/>
+                        <segue destination="Yga-w6-dz1" kind="relationship" relationship="viewControllers" id="Uaf-Od-FUE"/>
+                        <segue destination="hoe-ht-Ler" kind="relationship" relationship="viewControllers" id="m0d-Po-2D6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7t-cE-4Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545" y="-27"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Kc1-aJ-OTi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="ztQ-4d-xiS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hr5-5j-b4y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EmI-Y0-lE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="-477.21139430284859"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_plus_black" width="25" height="25"/>
+        <image name="tab_profile_black" width="25" height="25"/>
+        <namedColor name="stkCyan">
+            <color red="0.035000000149011612" green="0.67500001192092896" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="stkSeafoamGreen">
+            <color red="0.34900000691413879" green="0.85500001907348633" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

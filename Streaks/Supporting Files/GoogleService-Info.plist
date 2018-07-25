@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1034753529350-stnt9fdjpi3drffgmokeu6sdkq7pb0b4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1034753529350-stnt9fdjpi3drffgmokeu6sdkq7pb0b4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAiYlOZYmFinDjjPysVWwiEO4bQp5tb4m0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1034753529350</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vaedprasad.Streaks</string>
+	<key>PROJECT_ID</key>
+	<string>streaks-8f262</string>
+	<key>STORAGE_BUCKET</key>
+	<string>streaks-8f262.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1034753529350:ios:5c70e8f99a33064e</string>
+	<key>DATABASE_URL</key>
+	<string>https://streaks-8f262.firebaseio.com</string>
+</dict>
+</plist>

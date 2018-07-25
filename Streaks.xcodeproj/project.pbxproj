@@ -8,10 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A6233163210649C700CD05ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6233162210649C700CD05ED /* AppDelegate.swift */; };
-		A6233165210649C700CD05ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6233164210649C700CD05ED /* ViewController.swift */; };
 		A6233168210649C700CD05ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6233166210649C700CD05ED /* Main.storyboard */; };
-		A623316A210649CA00CD05ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6233169210649CA00CD05ED /* Assets.xcassets */; };
 		A623316D210649CA00CD05ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623316B210649CA00CD05ED /* LaunchScreen.storyboard */; };
+		A62331762106565B00CD05ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A62331752106565B00CD05ED /* GoogleService-Info.plist */; };
+		A623317F2106581D00CD05ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623317E2106581D00CD05ED /* Login.storyboard */; };
+		A62331812106587000CD05ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62331802106587000CD05ED /* LoginViewController.swift */; };
+		A623318321065A0D00CD05ED /* UIColor+STK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623318221065A0D00CD05ED /* UIColor+STK.swift */; };
+		A623319D21067F2E00CD05ED /* ostrich-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A623319521067F2D00CD05ED /* ostrich-regular.ttf */; };
+		A623319E21067F2E00CD05ED /* OstrichSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319621067F2D00CD05ED /* OstrichSans-Black.otf */; };
+		A623319F21067F2E00CD05ED /* OstrichSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319721067F2D00CD05ED /* OstrichSans-Bold.otf */; };
+		A62331A021067F2E00CD05ED /* OstrichSansDashed-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319821067F2E00CD05ED /* OstrichSansDashed-Medium.otf */; };
+		A62331A121067F2E00CD05ED /* OstrichSans-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319921067F2E00CD05ED /* OstrichSans-Heavy.otf */; };
+		A62331A221067F2E00CD05ED /* OstrichSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319A21067F2E00CD05ED /* OstrichSans-Medium.otf */; };
+		A62331A321067F2E00CD05ED /* OstrichSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319B21067F2E00CD05ED /* OstrichSans-Light.otf */; };
+		A62331A421067F2E00CD05ED /* OstrichSansRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */; };
+		A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECB210794EB002F4854 /* Assets.xcassets */; };
+		A6760ED121079F3B002F4854 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECF21079F3B002F4854 /* Home.storyboard */; };
+		A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */; };
+		A6760ED52107BEA0002F4854 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED42107BEA0002F4854 /* HomeViewController.swift */; };
+		A6760ED72107C124002F4854 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED62107C124002F4854 /* User.swift */; };
+		A6760ED92107E58D002F4854 /* FBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED82107E58D002F4854 /* FBService.swift */; };
 		CC9921297153FD48DC838F2A /* Pods_Streaks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8793E87ABA54AB49A1A93D13 /* Pods_Streaks.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +36,27 @@
 		8793E87ABA54AB49A1A93D13 /* Pods_Streaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Streaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A623315F210649C700CD05ED /* Streaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6233162210649C700CD05ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6233164210649C700CD05ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6233167210649C700CD05ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A6233169210649CA00CD05ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A623316C210649CA00CD05ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A623316E210649CA00CD05ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62331752106565B00CD05ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A623317E2106581D00CD05ED /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A62331802106587000CD05ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A623318221065A0D00CD05ED /* UIColor+STK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+STK.swift"; sourceTree = "<group>"; };
+		A623319521067F2D00CD05ED /* ostrich-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ostrich-regular.ttf"; sourceTree = "<group>"; };
+		A623319621067F2D00CD05ED /* OstrichSans-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Black.otf"; sourceTree = "<group>"; };
+		A623319721067F2D00CD05ED /* OstrichSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Bold.otf"; sourceTree = "<group>"; };
+		A623319821067F2E00CD05ED /* OstrichSansDashed-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSansDashed-Medium.otf"; sourceTree = "<group>"; };
+		A623319921067F2E00CD05ED /* OstrichSans-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Heavy.otf"; sourceTree = "<group>"; };
+		A623319A21067F2E00CD05ED /* OstrichSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Medium.otf"; sourceTree = "<group>"; };
+		A623319B21067F2E00CD05ED /* OstrichSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Light.otf"; sourceTree = "<group>"; };
+		A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSansRounded-Medium.otf"; sourceTree = "<group>"; };
+		A6760ECB210794EB002F4854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Streaks/Assets.xcassets; sourceTree = "<group>"; };
+		A6760ED021079F3B002F4854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengesViewController.swift; sourceTree = "<group>"; };
+		A6760ED42107BEA0002F4854 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A6760ED62107C124002F4854 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A6760ED82107E58D002F4854 /* FBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBService.swift; sourceTree = "<group>"; };
 		D998075839982FCECB591018 /* Pods-Streaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Streaks/Pods-Streaks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +92,7 @@
 		A6233156210649C700CD05ED = {
 			isa = PBXGroup;
 			children = (
+				A6760ECB210794EB002F4854 /* Assets.xcassets */,
 				A6233161210649C700CD05ED /* Streaks */,
 				A6233160210649C700CD05ED /* Products */,
 				28B8DC391386CE7B621DDB30 /* Pods */,
@@ -79,13 +112,100 @@
 			isa = PBXGroup;
 			children = (
 				A6233162210649C700CD05ED /* AppDelegate.swift */,
-				A6233164210649C700CD05ED /* ViewController.swift */,
-				A6233166210649C700CD05ED /* Main.storyboard */,
-				A6233169210649CA00CD05ED /* Assets.xcassets */,
-				A623316B210649CA00CD05ED /* LaunchScreen.storyboard */,
-				A623316E210649CA00CD05ED /* Info.plist */,
+				A62331742106562300CD05ED /* Supporting Files */,
+				A623319421067F1E00CD05ED /* Fonts */,
+				A623317C210656F000CD05ED /* Services */,
+				A623317B210656E900CD05ED /* Models */,
+				A623317A210656E100CD05ED /* Helpers */,
+				A6233179210656D600CD05ED /* Extensions */,
+				A623317D2106570200CD05ED /* Storyboards */,
+				A6233178210656CB00CD05ED /* Views */,
+				A6233177210656C500CD05ED /* Controllers */,
 			);
 			path = Streaks;
+			sourceTree = "<group>";
+		};
+		A62331742106562300CD05ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A623316E210649CA00CD05ED /* Info.plist */,
+				A62331752106565B00CD05ED /* GoogleService-Info.plist */,
+				A623318221065A0D00CD05ED /* UIColor+STK.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6233177210656C500CD05ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A62331802106587000CD05ED /* LoginViewController.swift */,
+				A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */,
+				A6760ED42107BEA0002F4854 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A6233178210656CB00CD05ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A6233179210656D600CD05ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A623317A210656E100CD05ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A623317B210656E900CD05ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6760ED62107C124002F4854 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A623317C210656F000CD05ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A6760ED82107E58D002F4854 /* FBService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A623317D2106570200CD05ED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A6760ECF21079F3B002F4854 /* Home.storyboard */,
+				A6233166210649C700CD05ED /* Main.storyboard */,
+				A623316B210649CA00CD05ED /* LaunchScreen.storyboard */,
+				A623317E2106581D00CD05ED /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A623319421067F1E00CD05ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A623319521067F2D00CD05ED /* ostrich-regular.ttf */,
+				A623319621067F2D00CD05ED /* OstrichSans-Black.otf */,
+				A623319721067F2D00CD05ED /* OstrichSans-Bold.otf */,
+				A623319921067F2E00CD05ED /* OstrichSans-Heavy.otf */,
+				A623319B21067F2E00CD05ED /* OstrichSans-Light.otf */,
+				A623319A21067F2E00CD05ED /* OstrichSans-Medium.otf */,
+				A623319821067F2E00CD05ED /* OstrichSansDashed-Medium.otf */,
+				A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +270,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A623316D210649CA00CD05ED /* LaunchScreen.storyboard in Resources */,
-				A623316A210649CA00CD05ED /* Assets.xcassets in Resources */,
+				A623319E21067F2E00CD05ED /* OstrichSans-Black.otf in Resources */,
+				A623319F21067F2E00CD05ED /* OstrichSans-Bold.otf in Resources */,
+				A62331A121067F2E00CD05ED /* OstrichSans-Heavy.otf in Resources */,
+				A62331762106565B00CD05ED /* GoogleService-Info.plist in Resources */,
+				A62331A221067F2E00CD05ED /* OstrichSans-Medium.otf in Resources */,
+				A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */,
+				A6760ED121079F3B002F4854 /* Home.storyboard in Resources */,
+				A62331A321067F2E00CD05ED /* OstrichSans-Light.otf in Resources */,
+				A623319D21067F2E00CD05ED /* ostrich-regular.ttf in Resources */,
+				A623317F2106581D00CD05ED /* Login.storyboard in Resources */,
+				A62331A021067F2E00CD05ED /* OstrichSansDashed-Medium.otf in Resources */,
+				A62331A421067F2E00CD05ED /* OstrichSansRounded-Medium.otf in Resources */,
 				A6233168210649C700CD05ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,22 +291,42 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3EB060835A23D1621D5DE4FF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Streaks/Pods-Streaks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -184,7 +335,7 @@
 		};
 		9C9A0C98EE1A31B5E7183F9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -202,7 +353,7 @@
 		};
 		E6F9BDDB5762E0299F349811 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -225,8 +376,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6233165210649C700CD05ED /* ViewController.swift in Sources */,
+				A6760ED52107BEA0002F4854 /* HomeViewController.swift in Sources */,
+				A62331812106587000CD05ED /* LoginViewController.swift in Sources */,
+				A6760ED72107C124002F4854 /* User.swift in Sources */,
+				A6760ED92107E58D002F4854 /* FBService.swift in Sources */,
+				A623318321065A0D00CD05ED /* UIColor+STK.swift in Sources */,
 				A6233163210649C700CD05ED /* AppDelegate.swift in Sources */,
+				A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +403,14 @@
 				A623316C210649CA00CD05ED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A6760ECF21079F3B002F4854 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6760ED021079F3B002F4854 /* Base */,
+			);
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -373,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38Y5NHAS98;
-				INFOPLIST_FILE = Streaks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Streaks/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,7 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38Y5NHAS98;
-				INFOPLIST_FILE = Streaks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Streaks/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
