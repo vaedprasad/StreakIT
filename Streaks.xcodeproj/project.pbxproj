@@ -25,9 +25,15 @@
 		A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECB210794EB002F4854 /* Assets.xcassets */; };
 		A6760ED121079F3B002F4854 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECF21079F3B002F4854 /* Home.storyboard */; };
 		A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */; };
-		A6760ED52107BEA0002F4854 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED42107BEA0002F4854 /* HomeViewController.swift */; };
 		A6760ED72107C124002F4854 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED62107C124002F4854 /* User.swift */; };
 		A6760ED92107E58D002F4854 /* FBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED82107E58D002F4854 /* FBService.swift */; };
+		A682566B210B8DFA00AD4FF7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566A210B8DFA00AD4FF7 /* Challenge.swift */; };
+		A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */; };
+		A682566F210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */; };
+		A68B97C1210A458C00501F87 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C0210A458C00501F87 /* UserProfileViewController.swift */; };
+		A68B97C3210A46D600501F87 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C2210A46D600501F87 /* CurrentUser.swift */; };
+		A68B97C5210A4E5600501F87 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */; };
+		A68B97C7210A689400501F87 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C6210A689400501F87 /* HomeTableViewController.swift */; };
 		CC9921297153FD48DC838F2A /* Pods_Streaks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8793E87ABA54AB49A1A93D13 /* Pods_Streaks.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +60,15 @@
 		A6760ECB210794EB002F4854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Streaks/Assets.xcassets; sourceTree = "<group>"; };
 		A6760ED021079F3B002F4854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengesViewController.swift; sourceTree = "<group>"; };
-		A6760ED42107BEA0002F4854 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A6760ED62107C124002F4854 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A6760ED82107E58D002F4854 /* FBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBService.swift; sourceTree = "<group>"; };
+		A682566A210B8DFA00AD4FF7 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChallengesTableViewCell.swift; sourceTree = "<group>"; };
+		A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewChallengesTableViewController.swift; sourceTree = "<group>"; };
+		A68B97C0210A458C00501F87 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		A68B97C2210A46D600501F87 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		A68B97C6210A689400501F87 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		D998075839982FCECB591018 /* Pods-Streaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Streaks/Pods-Streaks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,9 +150,11 @@
 		A6233177210656C500CD05ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A68B97C6210A689400501F87 /* HomeTableViewController.swift */,
+				A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */,
 				A62331802106587000CD05ED /* LoginViewController.swift */,
 				A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */,
-				A6760ED42107BEA0002F4854 /* HomeViewController.swift */,
+				A68B97C0210A458C00501F87 /* UserProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,6 +162,8 @@
 		A6233178210656CB00CD05ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */,
+				A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				A6760ED62107C124002F4854 /* User.swift */,
+				A68B97C2210A46D600501F87 /* CurrentUser.swift */,
+				A682566A210B8DFA00AD4FF7 /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,12 +394,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6760ED52107BEA0002F4854 /* HomeViewController.swift in Sources */,
+				A68B97C1210A458C00501F87 /* UserProfileViewController.swift in Sources */,
 				A62331812106587000CD05ED /* LoginViewController.swift in Sources */,
+				A682566F210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift in Sources */,
 				A6760ED72107C124002F4854 /* User.swift in Sources */,
+				A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */,
 				A6760ED92107E58D002F4854 /* FBService.swift in Sources */,
+				A682566B210B8DFA00AD4FF7 /* Challenge.swift in Sources */,
+				A68B97C7210A689400501F87 /* HomeTableViewController.swift in Sources */,
 				A623318321065A0D00CD05ED /* UIColor+STK.swift in Sources */,
 				A6233163210649C700CD05ED /* AppDelegate.swift in Sources */,
+				A68B97C3210A46D600501F87 /* CurrentUser.swift in Sources */,
+				A68B97C5210A4E5600501F87 /* CustomOverlayView.swift in Sources */,
 				A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

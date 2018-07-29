@@ -19,22 +19,22 @@
         <!--Login View Controller-->
         <scene sceneID="7nm-Fe-ajQ">
             <objects>
-                <viewController id="ifm-13-aaM" customClass="LoginViewController" customModule="Streaks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ifm-13-aaM" customClass="LoginViewController" customModule="Streaks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LZH-87-6hN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JFb-sS-r43">
-                                <rect key="frame" x="15" y="70" width="345" height="78"/>
+                                <rect key="frame" x="15" y="70" width="345" height="101"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streaks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeS-l1-aBL">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
-                                        <fontDescription key="fontDescription" name="OstrichSans-Heavy" family="Ostrich Sans" pointSize="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreakIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeS-l1-aBL">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="63"/>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="45"/>
                                         <color key="textColor" name="stkOffWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Logged In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdp-l4-Mj9">
-                                        <rect key="frame" x="0.0" y="55" width="345" height="23"/>
+                                        <rect key="frame" x="0.0" y="78" width="345" height="23"/>
                                         <fontDescription key="fontDescription" name="OstrichSans-Heavy" family="Ostrich Sans" pointSize="26"/>
                                         <color key="textColor" name="stkOffWhite"/>
                                         <nil key="highlightedColor"/>
@@ -54,11 +54,20 @@
                     <connections>
                         <outlet property="loginSubtitle" destination="jdp-l4-Mj9" id="P6U-VJ-sQK"/>
                         <outlet property="loginTitle" destination="FeS-l1-aBL" id="r51-8h-xC4"/>
+                        <segue destination="wx9-Ue-ykc" kind="show" identifier="ToMain" id="SoR-OP-vTM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSw-HN-8rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="27.436281859070466"/>
+            <point key="canvasLocation" x="-322" y="5"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="nbR-qU-aHn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="wx9-Ue-ykc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shl-S0-F6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="4"/>
         </scene>
     </scenes>
     <resources>
