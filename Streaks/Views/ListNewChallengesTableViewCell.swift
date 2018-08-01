@@ -10,6 +10,9 @@ import UIKit
 
 class ListNewChallengesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var newChallengeIconImageView: UIImageView!
+    @IBOutlet weak var newChallengeTitleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,12 @@ class ListNewChallengesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupWithChallenge(challenge: Challenge) {
+        newChallengeIconImageView.image = challenge.getIcon()
+        newChallengeTitleLabel.text = challenge.name
+        
     }
 
 }

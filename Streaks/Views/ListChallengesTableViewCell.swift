@@ -10,6 +10,12 @@ import UIKit
 
 class ListChallengesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var challengeTitleLabel: UILabel!
+    @IBOutlet weak var challengeSubtitleLabel: UILabel!
+    @IBOutlet weak var challengeImageView: UIImageView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +25,16 @@ class ListChallengesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupWithChallenge(challenge: Challenge) {
+        challengeTitleLabel.text = challenge.name
+        challengeSubtitleLabel.text = getCellSubtitle(maxStreak: challenge.maxStreak, currentStreak: challenge.currentStreak)
+        challengeImageView.image = challenge.getIcon()
+    }
+    
+    func getCellSubtitle(maxStreak: Int, currentStreak: Int) -> String {
+        return "🏆\(maxStreak) 🔥\(currentStreak)"
     }
 
 }

@@ -6,4 +6,13 @@
 //  Copyright © 2018 Vaed Prasad. All rights reserved.
 //
 
+
 import Foundation
+import FirebaseAuth.FIRUser
+import FirebaseDatabase
+
+struct ChallengeService {
+
+
+
+}

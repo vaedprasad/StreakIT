@@ -10,6 +10,12 @@ import UIKit
 
 class NewChallengeDetailViewController: UIViewController {
 
+    @IBOutlet weak var newChallengeTitleTextField: UITextField!
+    @IBOutlet weak var newChallengeImageIcon: UIImageView!
+    @IBOutlet weak var newChallengeDescriptionTextView: UITextView!
+    
+    var challenge: Challenge!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +26,15 @@ class NewChallengeDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func updateWithChallenge() {
+        newChallengeTitleTextField.placeholder = challenge.name
+        newChallengeImageIcon.image = challenge.getIcon()
+        newChallengeDescriptionTextView.text = challenge.description
+        
+    }
+    
+    
     
 
     /*

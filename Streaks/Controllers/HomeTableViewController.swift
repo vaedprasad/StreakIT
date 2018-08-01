@@ -10,12 +10,24 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
+    var challenges = [Challenge]()
+    var lastChallengeSelected: Challenge?
+    var currentUser: CurrentUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.tableView.backgroundColor = UIColor.white
+        //self.tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        self.tableView.separatorColor = UIColor.stkHotPink//UIColor(white: 0.95, alpha: 1)
         navigationItem.title = "Challenges"
-
+        currentUser = CurrentUser.current
+        print(currentUser)
+        UserService.getChallenges(for: currentUser!) { (challenges) in
+            self.challenges = challenges
+            self.tableView.reloadData()
+            print(challenges.count)
+        }
+//        challenges = API.getChallenges()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,18 +49,35 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return challenges.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listChallengesTableViewCell", for: indexPath) as! ListChallengesTableViewCell
+        //cell.contentView.backgroundColor = UIColor.stkSeafoamGreen//UIColor(white: 0.95, alpha: 1)
+        cell.setupWithChallenge(challenge: challenges[indexPath.row])
         //cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
         
         return cell
     }
 
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        lastChallengeSelected = challenges[indexPath.row]
+        self.performSegue(withIdentifier: Constants.Segue.toChallengeDetail, sender: self)
+        
+        
+        
+        //let challengeDetailViewController = ChallengeDetailViewController()
+        //challengeDetailViewController.updateWithChallenge(challenge: challenges[indexPath.row])
+        
+        //navigationController?.pushViewController(challengeDetailViewController, animated: false)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -84,6 +113,9 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        //set challenges
+    }
 
     // MARK: - Navigation
 
@@ -94,8 +126,10 @@ class HomeTableViewController: UITableViewController {
         guard let identifier = segue.identifier else { return }
         
         // 2
-        if identifier == "displayChallenge" {
-            print("Transitioning to the Display Note View Controller")
+        if identifier == Constants.Segue.toChallengeDetail {
+            let destination = segue.destination as! ChallengeDetailViewController
+            destination.challenge = self.lastChallengeSelected
+            
         }
     }
 

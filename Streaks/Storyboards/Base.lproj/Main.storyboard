@@ -44,7 +44,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3pw-sJ-qlM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_cards_black" id="JSo-U6-lka"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_cards_black" id="JSo-U6-lka">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="kolodaView" destination="35f-xx-LQ6" id="Zh9-W0-FsS"/>
@@ -89,7 +91,9 @@
         <scene sceneID="jC7-Hh-ndI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FOf-5E-z8h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_user_black" id="xEj-L3-1TL"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_user_black" id="xEj-L3-1TL">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0cf-jg-s2e">
@@ -107,8 +111,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_cards_black" width="60" height="60"/>
-        <image name="tab_user_black" width="60" height="60"/>
+        <image name="tab_cards_black" width="32" height="32"/>
+        <image name="tab_user_black" width="32" height="32"/>
         <namedColor name="stkSeafoamGreen">
             <color red="0.34900000691413879" green="0.85500001907348633" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

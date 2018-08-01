@@ -10,16 +10,33 @@ import UIKit
 
 class ListNewChallengesTableViewController: UITableViewController {
 
+    var lastChallengeSelected: Challenge?
+    
     struct NewChallenges {
         var sectionName: String
+        var isCustom = Bool()
         var sectionChallenges: [Challenge]
     }
     
-    var newChallenges = [Challenge]()
+    var newChallenges = [NewChallenges]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
+        
+        
+        
+//        newChallenges = []
+//        newChallenges.append(NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Create Your Own Challenge", description: "Create Your Custom Challenge", icon: "pushups", currentStreak: 0, maxStreak: 0)]))
+//        newChallenges.append(NewChallenges(sectionName: "Preset Challenges", isCustom: false, sectionChallenges: [
+//            Challenge(name: "No Soda", description: "No Soda Description", icon: "pushups", currentStreak: 0, maxStreak: 0),
+//            Challenge(name: "Skip Dessert", description: "Skip Dessert Description", icon: "pushups", currentStreak: 0, maxStreak: 0),
+//            Challenge(name: "Take a Walk", description: "Take a Walk Description", icon: "pushups", currentStreak: 0, maxStreak: 0),
+//            Challenge(name: "Exercise 30 Minutes", description: "Exercise 30 Minutes Description", icon: "pushups", currentStreak: 0, maxStreak: 0),
+//            Challenge(name: "Meditate", description: "Meditate Description", icon: "pushups", currentStreak: 0, maxStreak: 0)]))
         
         //newChallenges
         // Uncomment the following line to preserve selection between presentations
@@ -27,6 +44,7 @@ class ListNewChallengesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,23 +56,46 @@ class ListNewChallengesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return newChallenges.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return newChallenges[section].sectionChallenges.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return newChallenges[section].sectionName
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newChallenge", for: indexPath) as! ListNewChallengesTableViewCell
+
+        
+        cell.setupWithChallenge(challenge: newChallenges[indexPath.section].sectionChallenges[indexPath.row])
+        //cell.newChallengeTitleLabel.text = newChallenges[indexPath.section].sectionChallenges[indexPath.row].name
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        lastChallengeSelected = newChallenges[indexPath.section].sectionChallenges[indexPath.row]
+        self.performSegue(withIdentifier: Constants.Segue.toNewChallengeDetail, sender: self)
+        
+        
+        
+        //let challengeDetailViewController = ChallengeDetailViewController()
+        //challengeDetailViewController.updateWithChallenge(challenge: challenges[indexPath.row])
+        
+        //navigationController?.pushViewController(challengeDetailViewController, animated: false)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,14 +132,17 @@ class ListNewChallengesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        guard let identifier = segue.identifier else { return }
+        
+        // 2
+        if identifier == Constants.Segue.toNewChallengeDetail {
+            let destination = segue.destination as! NewChallengeDetailViewController
+            destination.challenge = self.lastChallengeSelected
+            
+        }
     }
-    */
 
 }

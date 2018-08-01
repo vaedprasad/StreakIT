@@ -73,14 +73,14 @@ class LoginViewController: UIViewController {
                 return
             }
             print("Succesfully authenticated with Firebase.")
-            self.fetchFacebookUser {
-                
+            self.fetchFacebookUser { user in
+                print(user)
                 self.performSegue(withIdentifier: "ToMain", sender: nil)
             }
         }
     }
     
-    fileprivate func fetchFacebookUser(completionHandler: @escaping()->()) {
+    fileprivate func fetchFacebookUser(completionHandler: @escaping(CurrentUser?)->()) {
         
         let graphRequestConnection = GraphRequestConnection()
         let graphRequest = GraphRequest(graphPath: "me", parameters: ["fields": "id, email, name, picture.type(large)"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion) //new
@@ -98,13 +98,7 @@ class LoginViewController: UIViewController {
                 let username = json["id"].string //new
                 guard let profilePictureUrl = json["picture"]["data"]["url"].string else { FBService.dismissHud(self.hud, text: "Error", detailText: "Failed to fetch user.", delay: 3); return }
                 
-                self.saveUserIntoFirebaseDatabase(name: name!, username: username!, email: email!, profileURL: profilePictureUrl, completionHandler: {
-                    print("saved")
-                    
-                    
-                    completionHandler()
-                    
-                })
+                self.saveUserIntoFirebaseDatabase(name: name!, username: username!, email: email!, profileURL: profilePictureUrl, completionHandler: completionHandler)
                 //self.saveUserIntoFirebaseDatabase() //Inserted
                 //                URLSession.shared.dataTask(with: url) { (data, response, err) in
                 //                    if err != nil {
@@ -129,7 +123,7 @@ class LoginViewController: UIViewController {
         graphRequestConnection.start()
     }
     
-    fileprivate func saveUserIntoFirebaseDatabase(name:String, username: String, email: String, profileURL: String, completionHandler: @escaping()->()) {
+    fileprivate func saveUserIntoFirebaseDatabase(name:String, username: String, email: String, profileURL: String, completionHandler: @escaping (CurrentUser?)->()) {
         
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
@@ -143,18 +137,23 @@ class LoginViewController: UIViewController {
         //CurrentUser.init(uid: uid, dictionary: dictionaryValues)
         
         let ref = Database.database().reference().child("users").child(uid)
-        
+//        let challengeRef = Database.database().reference().child("challenges").child(challengeId)
         ref.setValue(dictionaryValues) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
-                return completionHandler()
+                return completionHandler(nil)
             }
             
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                //let user = User(snapshot: snapshot)
+                guard let user = CurrentUser(snapshot: snapshot) else {
+                    return completionHandler(nil)
+                }
+                
+                CurrentUser.setCurrent(user, writeToUserDefaults: true)
+                
                 self.hud.dismiss(animated: true)
                 self.dismiss(animated: true, completion: nil)
-                completionHandler()
+                completionHandler(user)
             })
         }
         print("Successfully saved user info into Firebase database")

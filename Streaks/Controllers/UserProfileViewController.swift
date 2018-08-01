@@ -67,12 +67,13 @@ class UserProfileViewController: UIViewController {
         view.backgroundColor = .white
         navigationItem.title = "Your Profile"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Fetch User", style: .done, target: self, action: #selector(handleFetchUserButtonTapped))
-        
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Fetch User", style: .done, target: self, action: #selector(handleFetchUserButtonTapped))
         setupViews()
+        fetchUser()
+        
     }
     
-    @objc func handleFetchUserButtonTapped() {
+    func fetchUser() {
         hud.textLabel.text = "Fetching user..."
         hud.show(in: view, animated: true)
         if Auth.auth().currentUser != nil {
@@ -85,8 +86,12 @@ class UserProfileViewController: UIViewController {
                 self.nameLabel.text = user.name
                 self.usernameLabel.text = user.username
                 self.emailLabel.text = user.email
-                self.profileImageView.loadImage(urlString: user.profileImageUrl)
-                //self.profileImageView.loadImage(urlString: <#T##String#>)
+                
+                guard let imageURL = user.profileImageUrl else {
+                    return assertionFailure("Image URL Failed or wasn't present")
+                }
+                self.profileImageView.loadImage(urlString: imageURL)
+                //self.profileImageView.loadImage(urlString: )
                 
                 FBService.dismissHud(self.hud, text: "Success", detailText: "User fetched!", delay: 1)
                 

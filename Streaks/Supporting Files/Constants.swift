@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Constants {
+    struct Segue {
+        static let toChallengeDetail = "toChallengeDetail"
+        static let toNewChallengeDetail = "toNewChallengeDetail"
+        static let toCreateChallenge = "toCreateChallenge"
+    }
+    
+    struct UserDefaults {
+        static let currentUser = "currentUser"
+    }
+}

@@ -21,14 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        let storyboard = UIStoryboard(name: "Login", bundle: .main)
-        //let storyboard = UIStoryboard(name: "Login", bundle: .main)
-        
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            //initialViewController.view.backgroundColor = UIColor.stkCyan
-            window?.rootViewController = initialViewController
-            window?.makeKeyAndVisible()
-        }
+        configureInitialRootViewController(for: window)
 
         return true
     }
@@ -62,3 +55,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if let _ = Auth.auth().currentUser,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = try? JSONDecoder().decode(CurrentUser.self, from: userData) {
+            CurrentUser.setCurrent(user)
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
+}
