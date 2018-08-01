@@ -1,4 +1,4 @@
-# Streaks
+# StreakIt
 
 Streaks is an iOS mobile application that enables users to better their lifestyles by motivating them to complete daily lifestyle streaks for positive habits and share them with their friends.
 
@@ -40,13 +40,28 @@ Streaks will save users basic profile information (name, username, password, ema
 ## Views
 
 `ListChallengeTableViewCell.swift`
-* challengeImageView (UIImageView)
-* challengeTitleLabel (Label)
-* challengeSubtitleLabel (Label)
+* challengeImageView: UIImageView
+* challengeTitleLabel: Label
+* challengeSubtitleLabel: Label
 
 `ListNewChallengeTableViewCell.swift`
-* newChallengeIconImageView (UIImageView)
-* newChallengeTitleLabel (Label)
+* newChallengeIconImageView: UIImageView
+* newChallengeTitleLabel: Label
+
+`ChallengeDetailViewController.swift`
+* challengeTitleLabel: UILabel
+* challengeIconImageView: UIImageView
+* challengeDescriptionTextView: UITextView
+* maxStreakImageView: UIImageView
+* maxStreakLabel: UILabel
+* currentStreakImageView: UIImageView
+* currentStreakLabel: UILabel
+
+`NewChallengeDetailViewController.swift`
+* newChallengeTitleTextField: UITextField
+* newChallengeImageIcon: UIImageView
+* newChallengeDescriptionTextView: UITextView
+
 
 ## Controllers / Routes
 
