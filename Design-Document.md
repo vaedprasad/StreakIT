@@ -1,6 +1,6 @@
 # StreakIt
 
-Streaks is an iOS mobile application that enables users to better their lifestyles by motivating them to complete daily lifestyle streaks for positive habits and share them with their friends.
+StreakIt is an iOS mobile application that enables users to better their lifestyles by motivating them to complete daily lifestyle streaks for positive habits and share them with their friends.
 
 ## Audience
 
@@ -8,7 +8,7 @@ This app is targeted for anyone who is looking to either achieve a goal and deve
 
 ## Experience
 
-After logging in a user opens Streaks and is presented with a list of their current challenges, which displays an icon, streak name, current streak, and best streak. Each day, the user has the ability to complete a streak or fail a streak. Users can tap on a streak in the list to open a detail view of the challenge.
+After logging in a user opens StreakIt and is presented with a list of their current challenges, which displays an icon, streak name, current streak, and best streak. Each day, the user has the ability to complete a streak or fail a streak. Users can tap on a streak in the list to open a detail view of the challenge.
 
 # Technical
 
@@ -35,7 +35,7 @@ Firebase:
 				* "uid" (String)
 				* "username" (String)
 
-Streaks will save users basic profile information (name, username, password, email) and their challenge progress (streak start, streak end, current streak, max streak). ADDITIONAL FEATURE: Streaks will store list of friends and display their streaks in comparison to yours.
+StreakIt will save users basic profile information (name, username, password, email) and their challenge progress (streak start, streak end, current streak, max streak). ADDITIONAL FEATURE: StreakIt will store list of friends and display their streaks in comparison to yours.
 
 ## Views
 
@@ -85,4 +85,4 @@ Login/Create-Username View Controllers
 	
 ## Other
 
-Pending available time I will implement a social aspect to streaks where users can add friends and can compete with each other on streaks
+Pending available time I will implement a social aspect to StreakIt where users can add friends and can compete with each other on streaks
