@@ -16,37 +16,37 @@ After logging in a user opens Streaks and is presented with a list of their curr
 
 Firebase:
 
-* Challenge
-	* Current Streak (Int)
-	* Max Streak (Int)
-	* Icon (String)
-	* Challenge Name (String)
-	* Challenge Description (String)
+* Users
+	* UID (String)
+		* "name" (String)
+		* "email" (String)
+		* "username" (String)
+		* "profileURL" (String)
 
-* User
-	* Name (String)
-	* Email (String)
-	* Username (String)
-	* Password (String)
-	* Challenges
+* Challenges
+	* UID (String)
+		* Challenge ID (String)
+			* "name" (String)
+			* "description" (String)
+			* "current_streak" (Int)
+			* "max_streak" (Int)
+			* "icon" (String)
+			* "creator"
+				* "uid" (String)
+				* "username" (String)
 
 Streaks will save users basic profile information (name, username, password, email) and their challenge progress (streak start, streak end, current streak, max streak). ADDITIONAL FEATURE: Streaks will store list of friends and display their streaks in comparison to yours.
 
 ## Views
 
 `ListChallengeTableViewCell.swift`
-* Current Streak (Label)
-* Max Streak (Label)
-* Icon (UIImage)
-* Challenge Name (Label)
-* Completed Icon (UIImage)
+* challengeImageView (UIImageView)
+* challengeTitleLabel (Label)
+* challengeSubtitleLabel (Label)
 
 `ListNewChallengeTableViewCell.swift`
-* Current Streak (Label)
-* Max Streak (Label)
-* Icon (UIImage)
-* Challenge Name (Label)
-* Add Icon (UIImage)
+* newChallengeIconImageView (UIImageView)
+* newChallengeTitleLabel (Label)
 
 ## Controllers / Routes
 
@@ -55,16 +55,18 @@ Login/Create-Username View Controllers
 	*  User can login using Firebase Authentication
 * `TabBarViewController.swift`
 	*  3 Tab View Controller
-* `ListChallengesTableViewController.swift`
+* `HomeTableViewController.swift`
 	* User can view all their active challenges
 * `ChallengeDetailViewController.swift`
 	* When challenge is tapped open detail view of challenge including description
 * `ListNewChallengesTableViewController.swift`
 	* Presents user with list of default presets for challenges as well as the ability to create their own challenge
-* `NewPresetChallengeDetailViewController.swift`
-	* Opens detail view for preset challenge for user to add
-* `NewCustomChallengeDetailViewController.swift`
-	* Opens detail view for custom challenge where user can insert name, description, and icon
+* `NewChallengeDetailViewController.swift`
+	* Opens detail view for preset challenge or custom challenge where user can insert name, description, and icon
+* `CompleteChallengesViewController.swift`
+	* Use KolodaView to complete challenges with a Tinder-esque card swiping UX
+* `UserProfileViewController.swift`
+	* Display user profile including profile image, name, username, etc.
 	
 ## Other
 
