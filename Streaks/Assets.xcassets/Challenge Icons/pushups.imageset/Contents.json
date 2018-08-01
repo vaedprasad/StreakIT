@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "tasks_32.png",
+      "filename" : "icons8-pushups.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-pushups-1.png",
       "scale" : "2x"
     },
     {
