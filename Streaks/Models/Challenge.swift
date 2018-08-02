@@ -55,14 +55,24 @@ class Challenge {
         self.creator = CurrentUser(uid: uid, username: username)
     }
     
-//    init(name: String, description: String, icon: String, currentStreak: Int, maxStreak: Int) {
-//        self.name = name
-//        self.description = description
-//        self.icon = icon
-//        self.currentStreak = currentStreak
-//        self.maxStreak = maxStreak
-//        
-//    }
+    //Testing Initializer
+    init(name: String, description: String, icon: String, currentStreak: Int, maxStreak: Int, creator: CurrentUser) {
+        self.name = name
+        self.description = description
+        self.icon = icon
+        self.currentStreak = currentStreak
+        self.maxStreak = maxStreak
+        self.creator = creator
+    }
+    
+    init(name: String, description: String, icon: String, creator: CurrentUser) {
+        self.name = name
+        self.description = description
+        self.icon = icon
+        self.maxStreak = 0
+        self.currentStreak = 0
+        self.creator = creator
+    }
     
     func incrementStreak() {
         currentStreak += 1

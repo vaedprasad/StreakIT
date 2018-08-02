@@ -215,7 +215,11 @@
                         <viewLayoutGuide key="safeArea" id="vod-wk-0qA"/>
                     </view>
                     <navigationItem key="navigationItem" id="FhS-ip-lSk">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="XBa-Ja-tVq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="XBa-Ja-tVq">
+                            <connections>
+                                <segue destination="MxF-e0-Tei" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="9GW-Ug-APk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="newChallengeDescriptionTextView" destination="t5F-LK-XO3" id="r5v-a9-sYk"/>
@@ -224,6 +228,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81k-Fa-htI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MxF-e0-Tei" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3688.8000000000002" y="-961.16941529235385"/>
         </scene>

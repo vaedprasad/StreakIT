@@ -142,15 +142,15 @@
 			isa = PBXGroup;
 			children = (
 				A6233162210649C700CD05ED /* AppDelegate.swift */,
-				A62331742106562300CD05ED /* Supporting Files */,
 				A623319421067F1E00CD05ED /* Fonts */,
+				A62331742106562300CD05ED /* Supporting Files */,
 				A623317C210656F000CD05ED /* Services */,
 				A623317B210656E900CD05ED /* Models */,
+				A6233177210656C500CD05ED /* Controllers */,
+				A623317D2106570200CD05ED /* Storyboards */,
 				A623317A210656E100CD05ED /* Helpers */,
 				A6233179210656D600CD05ED /* Extensions */,
-				A623317D2106570200CD05ED /* Storyboards */,
 				A6233178210656CB00CD05ED /* Views */,
-				A6233177210656C500CD05ED /* Controllers */,
 			);
 			path = Streaks;
 			sourceTree = "<group>";

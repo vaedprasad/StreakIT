@@ -35,7 +35,23 @@ class NewChallengeDetailViewController: UIViewController {
     }
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "save":
+            print("save bar button item tapped")
+            guard let challengeName = newChallengeTitleTextField.text else { return }
+            guard let challengeDescription = newChallengeDescriptionTextView.text else { return }
+            ChallengeService.createChallenge(name: challengeName, description: challengeDescription, icon: "pushups")
+            
+        //case "cancel":
+        //    print("cancel bar button item tapped")
+            
+        default:
+            print("unexpected segue identifier")
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -22,17 +22,27 @@ class HomeTableViewController: UITableViewController {
         navigationItem.title = "Challenges"
         currentUser = CurrentUser.current
         print(currentUser)
-        UserService.getChallenges(for: currentUser!) { (challenges) in
+        ChallengeService.getChallenges(for: currentUser!) { (challenges) in
             self.challenges = challenges
             self.tableView.reloadData()
-            print(challenges.count)
+            print(self.challenges.count)
         }
+        
+        //newChallenges.append(NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Create Your Own Challenge", description: "Create Your Custom Challenge", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
 //        challenges = API.getChallenges()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        ChallengeService.getChallenges(for: currentUser!) { (challenges) in
+            self.challenges = challenges
+            self.tableView.reloadData()
+            print(self.challenges.count)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +87,20 @@ class HomeTableViewController: UITableViewController {
         //challengeDetailViewController.updateWithChallenge(challenge: challenges[indexPath.row])
         
         //navigationController?.pushViewController(challengeDetailViewController, animated: false)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("deleted item")
+            //notes.remove(at: indexPath.row)
+        }
+        
+        
+        
+        
+        /**ChallengeService.updateChallenge(challenge: Challenge()) { (updatedChakleng) in
+            <#code#>
+        }*/
     }
     /*
     // Override to support conditional editing of the table view.
