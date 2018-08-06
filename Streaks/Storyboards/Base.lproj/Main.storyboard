@@ -36,10 +36,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35f-xx-LQ6" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <rect key="frame" x="67" y="123" width="240" height="323"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="dHI-3u-64r">
+                                <rect key="frame" x="67" y="480" width="240" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-XU-Jb1">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="delete_sign"/>
+                                        <connections>
+                                            <action selector="leftButtonTapped:" destination="lH2-oP-6V8" eventType="touchUpInside" id="r4a-Ui-sKR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-YZ-i0k">
+                                        <rect key="frame" x="144" y="0.0" width="96" height="96"/>
+                                        <state key="normal" image="checkmark"/>
+                                        <connections>
+                                            <action selector="rightButtonTapped:" destination="lH2-oP-6V8" eventType="touchUpInside" id="fvJ-B9-HVs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3pw-sJ-qlM"/>
@@ -54,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTZ-aA-Flu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="1213"/>
+            <point key="canvasLocation" x="912.79999999999995" y="1212.1439280359821"/>
         </scene>
         <!--Home-->
         <scene sceneID="Kc1-aJ-OTi">
@@ -111,8 +132,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_cards_black" width="32" height="32"/>
-        <image name="tab_user_black" width="32" height="32"/>
+        <image name="checkmark" width="96" height="96"/>
+        <image name="delete_sign" width="96" height="96"/>
+        <image name="tab_cards_black" width="50" height="50"/>
+        <image name="tab_user_black" width="50" height="50"/>
         <namedColor name="stkSeafoamGreen">
             <color red="0.34900000691413879" green="0.85500001907348633" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

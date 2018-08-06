@@ -132,20 +132,15 @@ class LoginViewController: UIViewController {
                                 "email": email,
                                 "username": username,
                                 "profileURL": profileURL]
-        let values = [uid : dictionaryValues]
-        
-        //CurrentUser.init(uid: uid, dictionary: dictionaryValues)
-        
+        //let values = [uid : dictionaryValues]
         let ref = Database.database().reference().child("users").child(uid)
-//        let challengeRef = Database.database().reference().child("challenges").child(challengeId)
         ref.setValue(dictionaryValues) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return completionHandler(nil)
             }
-            
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                guard let user = CurrentUser(snapshot: snapshot) else {
+                guard let user = CurrentUser(snapshot: snapshot) else { //read data from Firebase and create new user
                     return completionHandler(nil)
                 }
                 
@@ -157,10 +152,6 @@ class LoginViewController: UIViewController {
             })
         }
         print("Successfully saved user info into Firebase database")
-        
-        // after successfull save dismiss the welcome view controller
-        
-        
     }
     
     override func viewDidLoad() {
@@ -169,7 +160,6 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor.stkCyan
         view.addSubview(signInWithFacebookButton)
         signInWithFacebookButton.anchor(nil, left: view.safeAreaLayoutGuide.leftAnchor, bottom: view.safeAreaLayoutGuide.centerYAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 50)
-        
         // Do any additional setup after loading the view.
     }
     
@@ -182,17 +172,4 @@ class LoginViewController: UIViewController {
         super.viewWillDisappear(animated)
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /**override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     let vc = HomeViewController() //your view controller
-     self.present(vc, animated: true, completion: nil)
-     }*/
-    
-    
 }

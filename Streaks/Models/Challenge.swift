@@ -14,7 +14,10 @@ import FirebaseDatabase.FIRDataSnapshot
 class Challenge {
     var key: String?
     var name: String
-    var description: String
+    //var description: String
+    var lastCompletion: Date
+    var cutoffTime: Date?
+    
     var icon: String
     var currentStreak: Int
     var maxStreak: Int
@@ -26,7 +29,7 @@ class Challenge {
                         "username" : creator.username]
         
         return ["name" : name,
-                "description" : description,
+                "last_completion" : lastCompletion.timeIntervalSince1970,
                 "icon" : icon,
                 "current_streak" : currentStreak,
                 "max_streak" : maxStreak,
@@ -37,7 +40,7 @@ class Challenge {
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let name = dict["name"] as? String,
-            let description = dict["description"] as? String,
+            let lastCompletion = dict["last_completion"] as? TimeInterval,
             let icon = dict["icon"] as? String,
             let currentStreak = dict["current_streak"] as? Int,
             let maxStreak = dict["max_streak"] as? Int,
@@ -48,7 +51,7 @@ class Challenge {
         
         self.key = snapshot.key
         self.name = name
-        self.description = description
+        self.lastCompletion = Date(timeIntervalSince1970: lastCompletion)
         self.icon = icon
         self.currentStreak = currentStreak
         self.maxStreak = maxStreak
@@ -56,22 +59,35 @@ class Challenge {
     }
     
     //Testing Initializer
-    init(name: String, description: String, icon: String, currentStreak: Int, maxStreak: Int, creator: CurrentUser) {
+    init(name: String, lastCompletion: Date, icon: String, currentStreak: Int, maxStreak: Int, creator: CurrentUser) {
         self.name = name
-        self.description = description
+        self.lastCompletion = lastCompletion
         self.icon = icon
         self.currentStreak = currentStreak
         self.maxStreak = maxStreak
         self.creator = creator
+        self.lastCompletion = lastCompletion
+
     }
     
-    init(name: String, description: String, icon: String, creator: CurrentUser) {
+    init(name: String, icon: String, creator: CurrentUser) {
         self.name = name
-        self.description = description
+        self.lastCompletion = Date()
         self.icon = icon
         self.maxStreak = 0
         self.currentStreak = 0
         self.creator = creator
+        //self.lastCompletion = lastCompletion
+    }
+    
+    func canCompleteChallenge() -> Bool {
+        let now = Date()
+        return now >= lastCompletion.midnightTonight
+    }
+    
+    func isStreakExpired() -> Bool {
+        let now = Date()
+        return now <= lastCompletion.cutoffTime
     }
     
     func incrementStreak() {
@@ -98,6 +114,36 @@ class Challenge {
 
     
 
+}
+
+extension Date {
+    var midnightToday: Date {
+        let cal = Calendar.current
+        //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
+        return cal.startOfDay(for: self)
+    }
+    
+    var midnightTonight: Date {
+        let cal = Calendar.current
+        //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
+        return cal.date(byAdding: .day, value: 1, to: self.midnightToday)!
+    }
+    
+    var cutoffTime: Date {
+        let cal = Calendar.current
+        //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
+        return cal.date(byAdding: .day, value: 1, to: self.midnightTonight)!
+    }
+    
+    var midday: Date {
+        let cal = Calendar.current
+        //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
+        return cal.date(byAdding: .hour, value: 12, to: self.midnightToday)!
+    }
+    
+    func hours(to date: Date) -> Int {
+        return Calendar.current.dateComponents([.hour], from: self, to: date).hour ?? 0
+    }
 }
 
 //let currentIcon = Icons.pushups

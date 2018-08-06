@@ -25,6 +25,9 @@
 		A644BC48210F923100E48E43 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */; };
 		A644BC4A210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */; };
 		A644BC4C210FB92400E48E43 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC4B210FB92400E48E43 /* API.swift */; };
+		A65915282118CF0100566FE7 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */; };
+		A659152A2118D05800566FE7 /* SelectIconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */; };
+		A6736CB62118D2820022C023 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6736CB52118D2820022C023 /* Icon.swift */; };
 		A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECB210794EB002F4854 /* Assets.xcassets */; };
 		A6760ED121079F3B002F4854 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECF21079F3B002F4854 /* Home.storyboard */; };
 		A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */; };
@@ -69,6 +72,9 @@
 		A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		A644BC4B210FB92400E48E43 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectIconCollectionViewController.swift; sourceTree = "<group>"; };
+		A6736CB52118D2820022C023 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		A6760ECB210794EB002F4854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Streaks/Assets.xcassets; sourceTree = "<group>"; };
 		A6760ED021079F3B002F4854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengesViewController.swift; sourceTree = "<group>"; };
@@ -148,9 +154,9 @@
 				A623317B210656E900CD05ED /* Models */,
 				A6233177210656C500CD05ED /* Controllers */,
 				A623317D2106570200CD05ED /* Storyboards */,
+				A6233178210656CB00CD05ED /* Views */,
 				A623317A210656E100CD05ED /* Helpers */,
 				A6233179210656D600CD05ED /* Extensions */,
-				A6233178210656CB00CD05ED /* Views */,
 			);
 			path = Streaks;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 				A68B97C0210A458C00501F87 /* UserProfileViewController.swift */,
 				A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */,
 				A6994FA12110CFB900CAA8F7 /* NewChallengeDetailViewController.swift */,
+				A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 				A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */,
 				A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */,
 				A6994FA32110F7D800CAA8F7 /* CardDesignView.swift */,
+				A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 				A6760ED62107C124002F4854 /* User.swift */,
 				A68B97C2210A46D600501F87 /* CurrentUser.swift */,
 				A682566A210B8DFA00AD4FF7 /* Challenge.swift */,
+				A6736CB52118D2820022C023 /* Icon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -424,6 +433,8 @@
 				A68B97C1210A458C00501F87 /* UserProfileViewController.swift in Sources */,
 				A6994FA621112B0900CAA8F7 /* Constants.swift in Sources */,
 				A644BC48210F923100E48E43 /* ChallengeDetailViewController.swift in Sources */,
+				A6736CB62118D2820022C023 /* Icon.swift in Sources */,
+				A65915282118CF0100566FE7 /* IconCollectionViewCell.swift in Sources */,
 				A62331812106587000CD05ED /* LoginViewController.swift in Sources */,
 				A682566F210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift in Sources */,
 				A6994FAC211263AC00CAA8F7 /* Storyboard+Utility.swift in Sources */,
@@ -443,6 +454,7 @@
 				A68B97C5210A4E5600501F87 /* CustomOverlayView.swift in Sources */,
 				A644BC4C210FB92400E48E43 /* API.swift in Sources */,
 				A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */,
+				A659152A2118D05800566FE7 /* SelectIconCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

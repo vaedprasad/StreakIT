@@ -13,6 +13,8 @@ struct Constants {
         static let toChallengeDetail = "toChallengeDetail"
         static let toNewChallengeDetail = "toNewChallengeDetail"
         static let toCreateChallenge = "toCreateChallenge"
+        static let saveChallenge = "saveChallenge"
+        static let saveNewChallenge = "saveNewChallenge"
     }
     
     struct UserDefaults {

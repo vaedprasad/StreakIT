@@ -23,4 +23,26 @@ struct UserService {
         })
     }
     
+    /**static func createUser(forUID uid: String, dictValues: [String : Any]) {
+        let ref = Database.database().reference().child("users").child(uid)
+        ref.setValue(dictValues) { (error, ref) in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return completionHandler(nil)
+            }
+            
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let user = CurrentUser(snapshot: snapshot) else {
+                    return completionHandler(nil)
+                }
+                
+                CurrentUser.setCurrent(user, writeToUserDefaults: true)
+                
+                self.hud.dismiss(animated: true)
+                self.dismiss(animated: true, completion: nil)
+                completionHandler(user)
+            })
+        }
+    }*/
+    
 }

@@ -21,7 +21,7 @@ class HomeTableViewController: UITableViewController {
         self.tableView.separatorColor = UIColor.stkHotPink//UIColor(white: 0.95, alpha: 1)
         navigationItem.title = "Challenges"
         currentUser = CurrentUser.current
-        print(currentUser)
+        //print(currentUser)
         ChallengeService.getChallenges(for: currentUser!) { (challenges) in
             self.challenges = challenges
             self.tableView.reloadData()
@@ -91,13 +91,25 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            print("deleted item")
-            //notes.remove(at: indexPath.row)
+            //print("deleted item")
+            let alert = UIAlertController(title: "Warning", message: "Are you sure you would like to delete this challenge? This cannot be undone.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { action in
+                ChallengeService.deleteChallenge(challenge: self.challenges[indexPath.row]) { (isDeleted) in
+                 //any usage for isDeleted (Bool)
+                 }
+                ChallengeService.getChallenges(for: self.currentUser!) { (challenges) in
+                 self.challenges = challenges
+                 self.tableView.reloadData()
+                 print(self.challenges.count)
+                 }
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
-        
-        
-        
-        
         /**ChallengeService.updateChallenge(challenge: Challenge()) { (updatedChakleng) in
             <#code#>
         }*/

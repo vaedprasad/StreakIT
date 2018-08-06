@@ -24,13 +24,13 @@ class ListNewChallengesTableViewController: UITableViewController {
         super.viewDidLoad()
         let user = CurrentUser.current
         newChallenges = []
-        newChallenges.append(NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Create Your Own Challenge", description: "Create Your Custom Challenge", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
+        newChallenges.append(NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Custom Challenge", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
         newChallenges.append(NewChallenges(sectionName: "Preset Challenges", isCustom: false, sectionChallenges: [
-            Challenge(name: "No Soda", description: "No Soda Description", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Skip Dessert", description: "Skip Dessert Description", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Take a Walk", description: "Take a Walk Description", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Exercise 30 Minutes", description: "Exercise 30 Minutes Description", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Meditate", description: "Meditate Description", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
+            Challenge(name: "No Soda", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
+            Challenge(name: "Skip Dessert", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
+            Challenge(name: "Take a Walk", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
+            Challenge(name: "Exercise 30 Minutes", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
+            Challenge(name: "Meditate", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
         
         //newChallenges
 //         Uncomment the following line to preserve selection between presentations

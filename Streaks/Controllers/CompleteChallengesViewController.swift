@@ -9,8 +9,20 @@
 import UIKit
 import Koloda
 
+private var numberOfCards: Int = 5
+
+
 class CompleteChallengesViewController: UIViewController {
     @IBOutlet weak var kolodaView: KolodaView!
+    
+    fileprivate var dataSource: [UIImage] = {
+        var array: [UIImage] = []
+        for index in 0..<numberOfCards {
+            //array.append(UIImage(named: "Card_like_\(index + 1)")!)
+        }
+        
+        return array
+    }()
     
     var images: [UIImage] = [#imageLiteral(resourceName: "btn_heart_red_solid"),#imageLiteral(resourceName: "btn_heart_black_outline"), #imageLiteral(resourceName: "btn_options_black")]
     override func viewDidLoad() {
@@ -25,6 +37,15 @@ class CompleteChallengesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func leftButtonTapped(_ sender: UIButton) {
+        kolodaView?.swipe(.left)
+    }
+
+    @IBAction func rightButtonTapped(_ sender: UIButton) {
+        kolodaView?.swipe(.right)
+    }
+    
     
 }
 
@@ -47,7 +68,7 @@ extension CompleteChallengesViewController: KolodaViewDataSource {
     }
 
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        return .fast
+        return .default
     }
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {

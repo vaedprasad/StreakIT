@@ -10,6 +10,7 @@ import UIKit
 
 class ListChallengesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
     @IBOutlet weak var challengeSubtitleLabel: UILabel!
     @IBOutlet weak var challengeImageView: UIImageView!
@@ -31,6 +32,8 @@ class ListChallengesTableViewCell: UITableViewCell {
         challengeTitleLabel.text = challenge.name
         challengeSubtitleLabel.text = getCellSubtitle(maxStreak: challenge.maxStreak, currentStreak: challenge.currentStreak)
         challengeImageView.image = challenge.getIcon()
+        challengeImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        cardView.backgroundColor = UIColor.stkOffWhite
     }
     
     func getCellSubtitle(maxStreak: Int, currentStreak: Int) -> String {

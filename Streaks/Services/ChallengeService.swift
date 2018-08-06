@@ -15,9 +15,9 @@ import FirebaseStorage
 
 struct ChallengeService {
 
-    static func createChallenge(name: String, description: String, icon: String) {
+    static func createChallenge(name: String, icon: String) {
         let currentUser = CurrentUser.current
-        let challenge = Challenge(name: name, description: description, icon: icon, creator: currentUser)
+        let challenge = Challenge(name: name, icon: icon, creator: currentUser)
         
         let rootRef = Database.database().reference()
         let newChallengeRef = rootRef.child("challenges").child(currentUser.uid).childByAutoId()

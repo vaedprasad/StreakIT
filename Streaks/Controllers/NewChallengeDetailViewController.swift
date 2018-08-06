@@ -11,8 +11,8 @@ import UIKit
 class NewChallengeDetailViewController: UIViewController {
 
     @IBOutlet weak var newChallengeTitleTextField: UITextField!
-    @IBOutlet weak var newChallengeImageIcon: UIImageView!
-    @IBOutlet weak var newChallengeDescriptionTextView: UITextView!
+    //@IBOutlet weak var newChallengeDescriptionTextView: UITextView!
+    @IBOutlet weak var newChallengeIconButton: UIButton!
     
     var challenge: Challenge!
 
@@ -29,8 +29,8 @@ class NewChallengeDetailViewController: UIViewController {
     
     func updateWithChallenge() {
         newChallengeTitleTextField.placeholder = challenge.name
-        newChallengeImageIcon.image = challenge.getIcon()
-        newChallengeDescriptionTextView.text = challenge.description
+        newChallengeIconButton.imageView?.image = challenge.getIcon()
+        //newChallengeDescriptionTextView.text = challenge.description
         
     }
     
@@ -39,11 +39,11 @@ class NewChallengeDetailViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-        case "save":
+        case Constants.Segue.saveNewChallenge:
             print("save bar button item tapped")
             guard let challengeName = newChallengeTitleTextField.text else { return }
-            guard let challengeDescription = newChallengeDescriptionTextView.text else { return }
-            ChallengeService.createChallenge(name: challengeName, description: challengeDescription, icon: "pushups")
+            //guard let challengeDescription = newChallengeDescriptionTextView.text else { return }
+            ChallengeService.createChallenge(name: challengeName, icon: "pushups")
             
         //case "cancel":
         //    print("cancel bar button item tapped")
