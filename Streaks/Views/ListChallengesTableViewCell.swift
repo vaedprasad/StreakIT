@@ -33,7 +33,7 @@ class ListChallengesTableViewCell: UITableViewCell {
         challengeSubtitleLabel.text = getCellSubtitle(maxStreak: challenge.maxStreak, currentStreak: challenge.currentStreak)
         challengeImageView.image = challenge.getIcon()
         challengeImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        cardView.backgroundColor = UIColor.stkOffWhite
+        cardView.backgroundColor = UIColor.stkHotPink
     }
     
     func getCellSubtitle(maxStreak: Int, currentStreak: Int) -> String {

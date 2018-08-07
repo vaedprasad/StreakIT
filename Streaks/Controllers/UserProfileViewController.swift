@@ -71,6 +71,14 @@ class UserProfileViewController: UIViewController {
         setupViews()
         fetchUser()
         
+        let alert = UIAlertController(title: "Coming Soon: StreakIT with Friends!", message: "Soon you will be able to share your favorite challenges with friends and compete with them", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "Sounds Good!", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func fetchUser() {

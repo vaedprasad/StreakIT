@@ -24,7 +24,7 @@ class CompleteChallengesViewController: UIViewController {
         return array
     }()
     
-    var images: [UIImage] = [#imageLiteral(resourceName: "btn_heart_red_solid"),#imageLiteral(resourceName: "btn_heart_black_outline"), #imageLiteral(resourceName: "btn_options_black")]
+    var images: [UIImage] = [#imageLiteral(resourceName: "pushups"),#imageLiteral(resourceName: "squats"), #imageLiteral(resourceName: "treadmill")]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -52,6 +52,7 @@ class CompleteChallengesViewController: UIViewController {
 extension CompleteChallengesViewController: KolodaViewDelegate {
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         koloda.reloadData()
+        print("run out of cards")
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {

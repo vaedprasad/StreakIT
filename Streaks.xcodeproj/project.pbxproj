@@ -28,6 +28,7 @@
 		A65915282118CF0100566FE7 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */; };
 		A659152A2118D05800566FE7 /* SelectIconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */; };
 		A6736CB62118D2820022C023 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6736CB52118D2820022C023 /* Icon.swift */; };
+		A6736CB8211A30A70022C023 /* Gotham-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6736CB7211A30A60022C023 /* Gotham-Rounded-Bold.otf */; };
 		A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECB210794EB002F4854 /* Assets.xcassets */; };
 		A6760ED121079F3B002F4854 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECF21079F3B002F4854 /* Home.storyboard */; };
 		A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */; };
@@ -75,6 +76,7 @@
 		A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectIconCollectionViewController.swift; sourceTree = "<group>"; };
 		A6736CB52118D2820022C023 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		A6736CB7211A30A60022C023 /* Gotham-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		A6760ECB210794EB002F4854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Streaks/Assets.xcassets; sourceTree = "<group>"; };
 		A6760ED021079F3B002F4854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengesViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				A623319A21067F2E00CD05ED /* OstrichSans-Medium.otf */,
 				A623319821067F2E00CD05ED /* OstrichSansDashed-Medium.otf */,
 				A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */,
+				A6736CB7211A30A60022C023 /* Gotham-Rounded-Bold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				A623319E21067F2E00CD05ED /* OstrichSans-Black.otf in Resources */,
 				A623319F21067F2E00CD05ED /* OstrichSans-Bold.otf in Resources */,
 				A62331A121067F2E00CD05ED /* OstrichSans-Heavy.otf in Resources */,
+				A6736CB8211A30A70022C023 /* Gotham-Rounded-Bold.otf in Resources */,
 				A62331762106565B00CD05ED /* GoogleService-Info.plist in Resources */,
 				A62331A221067F2E00CD05ED /* OstrichSans-Medium.otf in Resources */,
 				A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */,

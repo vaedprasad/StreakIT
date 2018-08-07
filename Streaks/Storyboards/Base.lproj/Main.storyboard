@@ -94,9 +94,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oua-pI-rDA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" name="stkSeafoamGreen"/>
+                        <color key="selectedImageTintColor" name="stkHotPink"/>
                     </tabBar>
                     <connections>
                         <segue destination="ztQ-4d-xiS" kind="relationship" relationship="viewControllers" id="JX6-wq-2zC"/>
@@ -136,8 +134,8 @@
         <image name="delete_sign" width="96" height="96"/>
         <image name="tab_cards_black" width="50" height="50"/>
         <image name="tab_user_black" width="50" height="50"/>
-        <namedColor name="stkSeafoamGreen">
-            <color red="0.34900000691413879" green="0.85500001907348633" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="stkHotPink">
+            <color red="0.98000001907348633" green="0.32499998807907104" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -38,10 +38,11 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         ChallengeService.getChallenges(for: currentUser!) { (challenges) in
             self.challenges = challenges
             self.tableView.reloadData()
-            print(self.challenges.count)
+            //print(self.challenges.count)
         }
     }
 
@@ -168,6 +169,7 @@ class HomeTableViewController: UITableViewController {
             
         }
     }
+    
 
 
 }

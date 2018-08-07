@@ -11,8 +11,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="OstrichSans-Heavy.otf">
-            <string>OstrichSans-Heavy</string>
+        <array key="Gotham-Rounded-Bold.otf">
+            <string>GothamRounded-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,42 +24,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JFb-sS-r43">
-                                <rect key="frame" x="15" y="70" width="345" height="101"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreakIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeS-l1-aBL">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="63"/>
-                                        <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="45"/>
-                                        <color key="textColor" name="stkOffWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Logged In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdp-l4-Mj9">
-                                        <rect key="frame" x="0.0" y="78" width="345" height="23"/>
-                                        <fontDescription key="fontDescription" name="OstrichSans-Heavy" family="Ostrich Sans" pointSize="26"/>
-                                        <color key="textColor" name="stkOffWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-GB-yKw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreakIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SK-or-w6N">
+                                <rect key="frame" x="78" y="60" width="220" height="52"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="52"/>
+                                <color key="textColor" name="stkWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" name="stkCyan"/>
                         <constraints>
-                            <constraint firstItem="JFb-sS-r43" firstAttribute="leading" secondItem="DXT-Rt-dPt" secondAttribute="leading" constant="15" id="L00-p1-84u"/>
-                            <constraint firstItem="JFb-sS-r43" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="UF9-yK-8E6"/>
-                            <constraint firstItem="JFb-sS-r43" firstAttribute="top" secondItem="DXT-Rt-dPt" secondAttribute="top" constant="50" id="Z1g-Ax-DBN"/>
-                            <constraint firstItem="DXT-Rt-dPt" firstAttribute="trailing" secondItem="JFb-sS-r43" secondAttribute="trailing" constant="15" id="tZQ-09-hI8"/>
+                            <constraint firstItem="Mdr-GB-yKw" firstAttribute="leading" secondItem="LZH-87-6hN" secondAttribute="leading" id="bZa-5s-jBr"/>
+                            <constraint firstAttribute="bottom" secondItem="Mdr-GB-yKw" secondAttribute="bottom" id="cXP-UJ-ZKD"/>
+                            <constraint firstItem="Mdr-GB-yKw" firstAttribute="top" secondItem="LZH-87-6hN" secondAttribute="top" id="lw4-vL-KPw"/>
+                            <constraint firstItem="1SK-or-w6N" firstAttribute="top" secondItem="DXT-Rt-dPt" secondAttribute="top" constant="40" id="qey-PF-JhH"/>
+                            <constraint firstAttribute="trailing" secondItem="Mdr-GB-yKw" secondAttribute="trailing" id="tzA-Up-07m"/>
+                            <constraint firstItem="1SK-or-w6N" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="ucG-R3-Z6P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DXT-Rt-dPt"/>
                     </view>
                     <connections>
-                        <outlet property="loginSubtitle" destination="jdp-l4-Mj9" id="P6U-VJ-sQK"/>
-                        <outlet property="loginTitle" destination="FeS-l1-aBL" id="r51-8h-xC4"/>
                         <segue destination="wx9-Ue-ykc" kind="show" identifier="ToMain" id="SoR-OP-vTM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSw-HN-8rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="5"/>
+            <point key="canvasLocation" x="-322.39999999999998" y="4.9475262368815596"/>
         </scene>
         <!--Main-->
         <scene sceneID="nbR-qU-aHn">
@@ -71,11 +62,9 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="stkCyan">
-            <color red="0.035000000149011612" green="0.67500001192092896" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="stkOffWhite">
-            <color red="0.96899998190000003" green="0.96899998190000003" blue="0.96899998190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="gradient" width="885" height="1804"/>
+        <namedColor name="stkWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

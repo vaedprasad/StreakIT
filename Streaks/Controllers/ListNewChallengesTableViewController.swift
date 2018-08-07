@@ -12,33 +12,17 @@ class ListNewChallengesTableViewController: UITableViewController {
 
     var lastChallengeSelected: Challenge?
     
-    struct NewChallenges {
+    /**struct NewChallenges {
         var sectionName: String
         var isCustom = Bool()
         var sectionChallenges: [Challenge]
-    }
+    }*/
     
-    var newChallenges = [NewChallenges]()
+    var newChallenges = [Constants.ListNewChallenges.NewChallenges]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = CurrentUser.current
-        newChallenges = []
-        newChallenges.append(NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Custom Challenge", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
-        newChallenges.append(NewChallenges(sectionName: "Preset Challenges", isCustom: false, sectionChallenges: [
-            Challenge(name: "No Soda", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Skip Dessert", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Take a Walk", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Exercise 30 Minutes", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-            Challenge(name: "Meditate", lastCompletion: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
-        
-        //newChallenges
-//         Uncomment the following line to preserve selection between presentations
-//         self.clearsSelectionOnViewWillAppear = false
-//
-//         Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        newChallenges = Constants.ListNewChallenges.newChallenges
     }
 
     override func didReceiveMemoryWarning() {

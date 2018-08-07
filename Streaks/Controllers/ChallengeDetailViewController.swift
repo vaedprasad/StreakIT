@@ -48,13 +48,43 @@ class ChallengeDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func streakFailedButtonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Next Steps", message: "Are you sure you did not complete this challenge? This cannot be undone.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.destructive, handler: { action in
+            self.challenge.resetStreak()
+            self.updateWithChallenge()
+            ChallengeService.updateChallenge(challenge: self.challenge) { (updatedChallenge) in
+                //
+            }
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
+    @IBAction func streakCompletedButtonTapped(_ sender: Any) {
+        //if !challenge.canCompleteChallenge() { return }
+        challenge.incrementStreak()
+        updateWithChallenge()
+        ChallengeService.updateChallenge(challenge: challenge) { (updatedChallenge) in
+            //
+        }
+    }
+    
     func updateWithChallenge() {
+        /**if challenge.isStreakExpired() {
+            challenge.resetStreak()
+            challenge.lastCompletion = Date()
+            //challenge.
+        }*/
         challengeTitleTextField.text = challenge.name
         challengeIconImageView.image = challenge.getIcon()
         challengeIconImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-
-        //challengeDescriptionTextView.text = challenge.description
-        //print(challenge.description)
         maxStreakLabel.text = String(challenge.maxStreak)
         maxStreakImageView.image = #imageLiteral(resourceName: "trophy")
         currentStreakLabel.text = String(challenge.currentStreak)
