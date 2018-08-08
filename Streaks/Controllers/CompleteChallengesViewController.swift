@@ -37,6 +37,8 @@ class CompleteChallengesViewController: UIViewController {
         //kolodaView.layer.cornerRadius = 8;
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        kolodaView.layer.cornerRadius = 8
+
         // Do any additional setup after loading the view.
     }
 

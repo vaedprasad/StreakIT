@@ -101,10 +101,22 @@ class ChallengeDetailViewController: UIViewController {
         challengeIconImageView.image = challenge.getIcon()
         challengeIconImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
         maxStreakLabel.text = "\(String(challenge.maxStreak))d"
-        //maxStreakImageView.image = #imageLiteral(resourceName: "trophy")
+        maxStreakImageView.image = #imageLiteral(resourceName: "trophy")
         currentStreakLabel.text = "\(String(challenge.currentStreak))d"
-        //currentStreakImageView.image = #imageLiteral(resourceName: "fire")
-        timeLeftLabel.text = "\(String(Date().hours(to: challenge.cutoffTime)))h"
+        if challenge.maxStreak == challenge.currentStreak {
+            currentStreakImageView.image = #imageLiteral(resourceName: "blue_fire")
+        } else {
+            currentStreakImageView.image = #imageLiteral(resourceName: "fire")
+        }
+        if Date().hours(to: challenge.cutoffTime) > 24 {
+            timeLeftLabel.text = "Done!"
+            timeLeftImageView.image = #imageLiteral(resourceName: "star")
+        } else {
+            timeLeftLabel.text = "\(String(Date().hours(to: challenge.cutoffTime)))h"
+            timeLeftImageView.image = #imageLiteral(resourceName: "sand_glass")
+        }
+
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -28,9 +28,8 @@ class NewChallengeDetailViewController: UIViewController {
     }
     
     func updateWithChallenge() {
-        newChallengeTitleTextField.placeholder = challenge.name
+        newChallengeTitleTextField.text = challenge.name
         newChallengeIconButton.imageView?.image = challenge.getIcon()
-        //newChallengeDescriptionTextView.text = challenge.description
         
     }
     

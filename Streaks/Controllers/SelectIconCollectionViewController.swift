@@ -69,9 +69,16 @@ class SelectIconCollectionViewController: UICollectionViewController {
     
         cell.iconImageView.image = icons[indexPath.row].getIcon()
         cell.iconLabel.text = icons[indexPath.row].iconName
+        cell.layer.cornerRadius = 8
+        cell.layer.borderColor = UIColor.stkHotPink.cgColor
+        cell.layer.borderWidth = 0.5
         // Configure the cell
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("select item at \(indexPath.row)")
     }
 
     // MARK: UICollectionViewDelegate

@@ -29,13 +29,14 @@ struct Constants {
         }
         static let user = CurrentUser.current
         static let newChallenges = [
-            NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Custom Challenge", lastCompletionTime: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]),
+            NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Custom Challenge", icon: "pencil", creator: user)]),
             NewChallenges(sectionName: "Preset Challenges", isCustom: false, sectionChallenges: [
-                Challenge(name: "No Soda", lastCompletionTime: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-                Challenge(name: "Skip Dessert", lastCompletionTime: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-                Challenge(name: "Take a Walk", lastCompletionTime: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-                Challenge(name: "Exercise 30 Minutes", lastCompletionTime: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user),
-                Challenge(name: "Meditate", lastCompletionTime: Date(), icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)
+                Challenge(name: "15 Pushups", icon: "pushups", creator: user),
+                Challenge(name: "No Smoking", icon: "no_smoking", creator: user),
+                Challenge(name: "No Facebook", icon: "facebook", creator: user),
+                Challenge(name: "Walk Dog", icon: "dog", creator: user),
+                Challenge(name: "Practice Piano", icon: "piano", creator: user),
+                Challenge(name: "No Alcohol", icon: "no_alcohol", creator: user)
                 ])
         ]
     }

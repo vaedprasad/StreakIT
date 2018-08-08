@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Rounded-Bold.otf">
+            <string>GothamRounded-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--User Profile View Controller-->
         <scene sceneID="p8n-Ke-mcz">
@@ -35,43 +40,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35f-xx-LQ6" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="67" y="123" width="240" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35f-xx-LQ6" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="67" y="119" width="240" height="350"/>
                                 <color key="backgroundColor" name="stkDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="3BU-ks-z1y"/>
+                                    <constraint firstAttribute="width" constant="240" id="G5q-1d-UUw"/>
+                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="dHI-3u-64r">
-                                <rect key="frame" x="67" y="480" width="148" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="dHI-3u-64r">
+                                <rect key="frame" x="113.5" y="484" width="148" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-XU-Jb1">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-XU-Jb1">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" image="delete_sign"/>
                                         <connections>
                                             <action selector="leftButtonTapped:" destination="lH2-oP-6V8" eventType="touchUpInside" id="r4a-Ui-sKR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-YZ-i0k">
-                                        <rect key="frame" x="98" y="0.0" width="50" height="50"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-YZ-i0k">
+                                        <rect key="frame" x="98" y="0.0" width="50" height="100"/>
                                         <state key="normal" image="checkmark"/>
                                         <connections>
                                             <action selector="rightButtonTapped:" destination="lH2-oP-6V8" eventType="touchUpInside" id="fvJ-B9-HVs"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Axl-e6-pG0"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-KG-lIr">
-                                <rect key="frame" x="61" y="50" width="253.5" height="39.5"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="34"/>
+                                <rect key="frame" x="46" y="50" width="283.5" height="34"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dHI-3u-64r" firstAttribute="centerX" secondItem="MPr-4I-36B" secondAttribute="centerX" id="KQR-0i-LYy"/>
+                            <constraint firstItem="35f-xx-LQ6" firstAttribute="top" secondItem="vMN-KG-lIr" secondAttribute="bottom" constant="35" id="Tuz-m8-dV2"/>
+                            <constraint firstItem="35f-xx-LQ6" firstAttribute="centerX" secondItem="MPr-4I-36B" secondAttribute="centerX" id="juq-Y6-ZyH"/>
                             <constraint firstItem="vMN-KG-lIr" firstAttribute="centerX" secondItem="MPr-4I-36B" secondAttribute="centerX" id="nzv-zG-icL"/>
                             <constraint firstItem="vMN-KG-lIr" firstAttribute="top" secondItem="3pw-sJ-qlM" secondAttribute="top" constant="30" id="sFa-2O-Tbl"/>
+                            <constraint firstItem="dHI-3u-64r" firstAttribute="top" secondItem="35f-xx-LQ6" secondAttribute="bottom" constant="15" id="sWH-Xc-Tgk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3pw-sJ-qlM"/>
                     </view>

@@ -24,7 +24,6 @@
 		A62331A421067F2E00CD05ED /* OstrichSansRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */; };
 		A644BC48210F923100E48E43 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */; };
 		A644BC4A210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */; };
-		A644BC4C210FB92400E48E43 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC4B210FB92400E48E43 /* API.swift */; };
 		A65915282118CF0100566FE7 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */; };
 		A659152A2118D05800566FE7 /* SelectIconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */; };
 		A6736CB62118D2820022C023 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6736CB52118D2820022C023 /* Icon.swift */; };
@@ -32,12 +31,12 @@
 		A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECB210794EB002F4854 /* Assets.xcassets */; };
 		A6760ED121079F3B002F4854 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6760ECF21079F3B002F4854 /* Home.storyboard */; };
 		A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */; };
-		A6760ED72107C124002F4854 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED62107C124002F4854 /* User.swift */; };
 		A6760ED92107E58D002F4854 /* FBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6760ED82107E58D002F4854 /* FBService.swift */; };
+		A678689A211B782000EEB73D /* gotham-rounded-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6786898211B781E00EEB73D /* gotham-rounded-medium.otf */; };
+		A678689B211B782000EEB73D /* gotham-rounded-book.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6786899211B781F00EEB73D /* gotham-rounded-book.otf */; };
 		A682566B210B8DFA00AD4FF7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566A210B8DFA00AD4FF7 /* Challenge.swift */; };
 		A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */; };
 		A682566F210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */; };
-		A68847B8211A5DD700CAC3F4 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68847B7211A5DD700CAC3F4 /* LaunchScreenViewController.swift */; };
 		A68B97C1210A458C00501F87 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C0210A458C00501F87 /* UserProfileViewController.swift */; };
 		A68B97C3210A46D600501F87 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C2210A46D600501F87 /* CurrentUser.swift */; };
 		A68B97C5210A4E5600501F87 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */; };
@@ -73,7 +72,6 @@
 		A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSansRounded-Medium.otf"; sourceTree = "<group>"; };
 		A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewChallengesTableViewCell.swift; sourceTree = "<group>"; };
-		A644BC4B210FB92400E48E43 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectIconCollectionViewController.swift; sourceTree = "<group>"; };
 		A6736CB52118D2820022C023 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -81,12 +79,12 @@
 		A6760ECB210794EB002F4854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Streaks/Assets.xcassets; sourceTree = "<group>"; };
 		A6760ED021079F3B002F4854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		A6760ED22107A50F002F4854 /* CompleteChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengesViewController.swift; sourceTree = "<group>"; };
-		A6760ED62107C124002F4854 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A6760ED82107E58D002F4854 /* FBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBService.swift; sourceTree = "<group>"; };
+		A6786898211B781E00EEB73D /* gotham-rounded-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-rounded-medium.otf"; sourceTree = "<group>"; };
+		A6786899211B781F00EEB73D /* gotham-rounded-book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-rounded-book.otf"; sourceTree = "<group>"; };
 		A682566A210B8DFA00AD4FF7 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewChallengesTableViewController.swift; sourceTree = "<group>"; };
-		A68847B7211A5DD700CAC3F4 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		A68B97C0210A458C00501F87 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A68B97C2210A46D600501F87 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */,
 				A6994FA12110CFB900CAA8F7 /* NewChallengeDetailViewController.swift */,
 				A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */,
-				A68847B7211A5DD700CAC3F4 /* LaunchScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 		A623317B210656E900CD05ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A6760ED62107C124002F4854 /* User.swift */,
 				A68B97C2210A46D600501F87 /* CurrentUser.swift */,
 				A682566A210B8DFA00AD4FF7 /* Challenge.swift */,
 				A6736CB52118D2820022C023 /* Icon.swift */,
@@ -234,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				A6760ED82107E58D002F4854 /* FBService.swift */,
-				A644BC4B210FB92400E48E43 /* API.swift */,
 				A6994FA721122B1B00CAA8F7 /* ChallengeService.swift */,
 				A6994FA921123B5000CAA8F7 /* UserService.swift */,
 			);
@@ -255,6 +250,8 @@
 		A623319421067F1E00CD05ED /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A6786899211B781F00EEB73D /* gotham-rounded-book.otf */,
+				A6786898211B781E00EEB73D /* gotham-rounded-medium.otf */,
 				A623319521067F2D00CD05ED /* ostrich-regular.ttf */,
 				A623319621067F2D00CD05ED /* OstrichSans-Black.otf */,
 				A623319721067F2D00CD05ED /* OstrichSans-Bold.otf */,
@@ -335,12 +332,14 @@
 				A62331A121067F2E00CD05ED /* OstrichSans-Heavy.otf in Resources */,
 				A6736CB8211A30A70022C023 /* Gotham-Rounded-Bold.otf in Resources */,
 				A62331762106565B00CD05ED /* GoogleService-Info.plist in Resources */,
+				A678689B211B782000EEB73D /* gotham-rounded-book.otf in Resources */,
 				A62331A221067F2E00CD05ED /* OstrichSans-Medium.otf in Resources */,
 				A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */,
 				A6760ED121079F3B002F4854 /* Home.storyboard in Resources */,
 				A62331A321067F2E00CD05ED /* OstrichSans-Light.otf in Resources */,
 				A623319D21067F2E00CD05ED /* ostrich-regular.ttf in Resources */,
 				A623317F2106581D00CD05ED /* Login.storyboard in Resources */,
+				A678689A211B782000EEB73D /* gotham-rounded-medium.otf in Resources */,
 				A62331A021067F2E00CD05ED /* OstrichSansDashed-Medium.otf in Resources */,
 				A62331A421067F2E00CD05ED /* OstrichSansRounded-Medium.otf in Resources */,
 				A6233168210649C700CD05ED /* Main.storyboard in Resources */,
@@ -447,11 +446,9 @@
 				A6994FAC211263AC00CAA8F7 /* Storyboard+Utility.swift in Sources */,
 				A6994FA821122B1B00CAA8F7 /* ChallengeService.swift in Sources */,
 				A6994FA42110F7D800CAA8F7 /* CardDesignView.swift in Sources */,
-				A6760ED72107C124002F4854 /* User.swift in Sources */,
 				A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */,
 				A6760ED92107E58D002F4854 /* FBService.swift in Sources */,
 				A682566B210B8DFA00AD4FF7 /* Challenge.swift in Sources */,
-				A68847B8211A5DD700CAC3F4 /* LaunchScreenViewController.swift in Sources */,
 				A68B97C7210A689400501F87 /* HomeTableViewController.swift in Sources */,
 				A6994FA22110CFB900CAA8F7 /* NewChallengeDetailViewController.swift in Sources */,
 				A623318321065A0D00CD05ED /* UIColor+STK.swift in Sources */,
@@ -460,7 +457,6 @@
 				A644BC4A210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift in Sources */,
 				A68B97C3210A46D600501F87 /* CurrentUser.swift in Sources */,
 				A68B97C5210A4E5600501F87 /* CustomOverlayView.swift in Sources */,
-				A644BC4C210FB92400E48E43 /* API.swift in Sources */,
 				A6760ED32107A50F002F4854 /* CompleteChallengesViewController.swift in Sources */,
 				A659152A2118D05800566FE7 /* SelectIconCollectionViewController.swift in Sources */,
 			);

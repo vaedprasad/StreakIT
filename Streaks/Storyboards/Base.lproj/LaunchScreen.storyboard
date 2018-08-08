@@ -6,15 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Gotham-Rounded-Bold.otf">
-            <string>GothamRounded-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -27,14 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-dz-tny">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreakIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-Hv-g8q">
-                                <rect key="frame" x="37.5" y="446" width="300.5" height="71"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="71"/>
-                                <color key="textColor" name="stkWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_white" translatesAutoresizingMaskIntoConstraints="NO" id="OhV-Ug-Zzv">
-                                <rect key="frame" x="70" y="93" width="235" height="343"/>
+                                <rect key="frame" x="110" y="160" width="235" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="235" id="0bt-er-moP"/>
                                     <constraint firstAttribute="height" constant="343" id="sfN-DX-sEo"/>
@@ -43,12 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OhV-Ug-Zzv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="Ds4-7h-oGu"/>
                             <constraint firstAttribute="bottom" secondItem="hDk-dz-tny" secondAttribute="bottom" id="OkK-94-ibG"/>
-                            <constraint firstItem="pXq-Hv-g8q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ro8-Sy-4R1"/>
-                            <constraint firstItem="pXq-Hv-g8q" firstAttribute="top" secondItem="OhV-Ug-Zzv" secondAttribute="bottom" constant="10" id="V9O-a9-Ai3"/>
-                            <constraint firstItem="OhV-Ug-Zzv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y92-yP-VXG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OhV-Ug-Zzv" secondAttribute="trailing" constant="30" id="UhQ-68-MOF"/>
                             <constraint firstAttribute="trailing" secondItem="hDk-dz-tny" secondAttribute="trailing" id="dry-Dh-xnO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pXq-Hv-g8q" secondAttribute="bottom" constant="150" id="liO-UC-id4"/>
                             <constraint firstItem="hDk-dz-tny" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="mBJ-Xo-YQz"/>
                             <constraint firstItem="hDk-dz-tny" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xGI-Fg-saq"/>
                         </constraints>
@@ -63,8 +49,5 @@
     <resources>
         <image name="gradient" width="885" height="1804"/>
         <image name="icon_white" width="547" height="617"/>
-        <namedColor name="stkWhite">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
