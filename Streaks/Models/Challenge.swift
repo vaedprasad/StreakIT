@@ -82,7 +82,7 @@ class Challenge {
         self.lastCompletionTime = Date()
         self.nextDayTime = lastCompletionTime.midnightToday
         self.cutoffTime = lastCompletionTime.midnightTonight
-        var b = lastCompletionTime.cutoffTime
+        //var b = lastCompletionTime.cutoffTime
         self.icon = icon
         self.maxStreak = 0
         self.currentStreak = 0
@@ -96,17 +96,22 @@ class Challenge {
     
     func setTimeWindows() {
         nextDayTime = lastCompletionTime.midnightTonight
-        cutoffTime = lastCompletionTime.cutoffTime
+        cutoffTime = lastCompletionTime.midnightTomorrow
     }
     
     func canCompleteChallenge() -> Bool {
         let now = Date()
-        return now >= lastCompletionTime.midnightTonight
+        return now >= nextDayTime
     }
     
     func isStreakExpired() -> Bool {
         let now = Date()
-        return now <= lastCompletionTime.cutoffTime
+        return now >= cutoffTime
+    }
+    
+    func hoursUntilCutoff() -> Int {
+        let now = Date()
+        return now.hours(to: cutoffTime)
     }
     
     func incrementStreak() {
@@ -138,12 +143,7 @@ class Challenge {
 }
 
 extension Date {
-    
-    /**var beginning: Date {
-        //let a = timeIntervalSince1970(1)
-        
-    }*/
-    
+
     var midnightToday: Date {
         let cal = Calendar.current
         //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
@@ -153,19 +153,13 @@ extension Date {
     var midnightTonight: Date {
         let cal = Calendar.current
         //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
-        return cal.date(byAdding: .nanosecond, value: 86400000000000, to: self.midnightToday)!
+        return cal.date(byAdding: .day, value: 1, to: self.midnightToday)!
     }
     
-    var cutoffTime: Date {
+    var midnightTomorrow: Date {
         let cal = Calendar.current
         //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
-        return cal.date(byAdding: .nanosecond, value: 86400000000000, to: self.midnightTonight)!
-    }
-    
-    var midday: Date {
-        let cal = Calendar.current
-        //cal.timeZone = TimeZone(identifier: "Europe/Paris")!
-        return cal.date(byAdding: .hour, value: 12, to: self.midnightToday)!
+        return cal.date(byAdding: .day, value: 1, to: self.midnightTonight)!
     }
     
     func hours(to date: Date) -> Int {

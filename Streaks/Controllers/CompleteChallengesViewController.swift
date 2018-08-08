@@ -14,8 +14,13 @@ private var numberOfCards: Int = 5
 
 class CompleteChallengesViewController: UIViewController {
     @IBOutlet weak var kolodaView: KolodaView!
+    //var currentUser: CurrentUser?
+
     
     fileprivate var dataSource: [UIImage] = {
+        //var challenges = ChallengeService.getChallenges(for: CurrentUser.current, completion: { (challenges) in
+            //
+        //})
         var array: [UIImage] = []
         for index in 0..<numberOfCards {
             //array.append(UIImage(named: "Card_like_\(index + 1)")!)
@@ -27,7 +32,9 @@ class CompleteChallengesViewController: UIViewController {
     var images: [UIImage] = [#imageLiteral(resourceName: "pushups"),#imageLiteral(resourceName: "squats"), #imageLiteral(resourceName: "treadmill")]
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.view.backgroundColor = UIColor.white
+        //kolodaView.layer.cornerRadius = 8;
         kolodaView.dataSource = self
         kolodaView.delegate = self
         // Do any additional setup after loading the view.

@@ -69,13 +69,14 @@ class HomeTableViewController: UITableViewController {
         //cell.contentView.backgroundColor = UIColor.stkSeafoamGreen//UIColor(white: 0.95, alpha: 1)
         cell.setupWithChallenge(challenge: challenges[indexPath.row])
         //cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
-        
+//        cell.backgroundColor = .blue
+//        cell.cardView.backgroundColor = .yellow
         return cell
     }
 
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

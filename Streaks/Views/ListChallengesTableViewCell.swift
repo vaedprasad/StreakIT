@@ -20,6 +20,7 @@ class ListChallengesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,8 +33,11 @@ class ListChallengesTableViewCell: UITableViewCell {
         challengeTitleLabel.text = challenge.name
         challengeSubtitleLabel.text = getCellSubtitle(maxStreak: challenge.maxStreak, currentStreak: challenge.currentStreak)
         challengeImageView.image = challenge.getIcon()
-        challengeImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        cardView.backgroundColor = UIColor.stkHotPink
+        cardView.layer.cornerRadius = 8
+        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 8)
+        layer.shadowPath = shadowPath.cgPath
+        //challengeImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        //cardView.backgroundColor = UIColor.stkHotPink
     }
     
     func getCellSubtitle(maxStreak: Int, currentStreak: Int) -> String {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,11 +34,21 @@
                                 <color key="textColor" name="stkWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_white" translatesAutoresizingMaskIntoConstraints="NO" id="nZ6-Tc-JoW">
+                                <rect key="frame" x="123.5" y="127" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nZ6-Tc-JoW" secondAttribute="height" multiplier="1:1" id="F7F-HX-ked"/>
+                                    <constraint firstAttribute="width" constant="128" id="K06-Ga-4sf"/>
+                                    <constraint firstAttribute="height" constant="128" id="r4K-4x-8pl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="nZ6-Tc-JoW" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="4jK-fI-PZr"/>
                             <constraint firstItem="Mdr-GB-yKw" firstAttribute="leading" secondItem="LZH-87-6hN" secondAttribute="leading" id="bZa-5s-jBr"/>
                             <constraint firstAttribute="bottom" secondItem="Mdr-GB-yKw" secondAttribute="bottom" id="cXP-UJ-ZKD"/>
                             <constraint firstItem="Mdr-GB-yKw" firstAttribute="top" secondItem="LZH-87-6hN" secondAttribute="top" id="lw4-vL-KPw"/>
+                            <constraint firstItem="nZ6-Tc-JoW" firstAttribute="top" secondItem="1SK-or-w6N" secondAttribute="bottom" constant="15" id="n8a-Uc-azw"/>
                             <constraint firstItem="1SK-or-w6N" firstAttribute="top" secondItem="DXT-Rt-dPt" secondAttribute="top" constant="40" id="qey-PF-JhH"/>
                             <constraint firstAttribute="trailing" secondItem="Mdr-GB-yKw" secondAttribute="trailing" id="tzA-Up-07m"/>
                             <constraint firstItem="1SK-or-w6N" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="ucG-R3-Z6P"/>
@@ -63,6 +74,7 @@
     </scenes>
     <resources>
         <image name="gradient" width="885" height="1804"/>
+        <image name="icon_white" width="547" height="617"/>
         <namedColor name="stkWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

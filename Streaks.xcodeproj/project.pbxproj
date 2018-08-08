@@ -37,6 +37,7 @@
 		A682566B210B8DFA00AD4FF7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566A210B8DFA00AD4FF7 /* Challenge.swift */; };
 		A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */; };
 		A682566F210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */; };
+		A68847B8211A5DD700CAC3F4 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68847B7211A5DD700CAC3F4 /* LaunchScreenViewController.swift */; };
 		A68B97C1210A458C00501F87 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C0210A458C00501F87 /* UserProfileViewController.swift */; };
 		A68B97C3210A46D600501F87 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C2210A46D600501F87 /* CurrentUser.swift */; };
 		A68B97C5210A4E5600501F87 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */; };
@@ -85,6 +86,7 @@
 		A682566A210B8DFA00AD4FF7 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		A682566C210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		A682566E210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewChallengesTableViewController.swift; sourceTree = "<group>"; };
+		A68847B7211A5DD700CAC3F4 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		A68B97C0210A458C00501F87 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A68B97C2210A46D600501F87 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		A68B97C4210A4E5600501F87 /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */,
 				A6994FA12110CFB900CAA8F7 /* NewChallengeDetailViewController.swift */,
 				A65915292118D05800566FE7 /* SelectIconCollectionViewController.swift */,
+				A68847B7211A5DD700CAC3F4 /* LaunchScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */,
 				A6760ED92107E58D002F4854 /* FBService.swift in Sources */,
 				A682566B210B8DFA00AD4FF7 /* Challenge.swift in Sources */,
+				A68847B8211A5DD700CAC3F4 /* LaunchScreenViewController.swift in Sources */,
 				A68B97C7210A689400501F87 /* HomeTableViewController.swift in Sources */,
 				A6994FA22110CFB900CAA8F7 /* NewChallengeDetailViewController.swift in Sources */,
 				A623318321065A0D00CD05ED /* UIColor+STK.swift in Sources */,

@@ -68,27 +68,43 @@ class ChallengeDetailViewController: UIViewController {
     }
     
     @IBAction func streakCompletedButtonTapped(_ sender: Any) {
-        //if !challenge.canCompleteChallenge() { return }
-        challenge.incrementStreak()
-        updateWithChallenge()
-        ChallengeService.updateChallenge(challenge: challenge) { (updatedChallenge) in
-            //
+        if !challenge.canCompleteChallenge() {
+            let alert = UIAlertController(title: "Already Completed", message: "You have already completed this challenge today. Please wait until tomorrow to complete this challenge again.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.cancel, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            challenge.incrementStreak()
+            updateWithChallenge()
+            ChallengeService.updateChallenge(challenge: challenge) { (updatedChallenge) in
+                //
+            }
         }
     }
     
     func updateWithChallenge() {
-        /**if challenge.isStreakExpired() {
+        if challenge.isStreakExpired() {
             challenge.resetStreak()
-            challenge.lastCompletion = Date()
-            //challenge.
-        }*/
+            let alert = UIAlertController(title: "Streak Reset", message: "You did not complete your streak yesterday so your streak has been reset.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+        
         challengeTitleTextField.text = challenge.name
         challengeIconImageView.image = challenge.getIcon()
         challengeIconImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        maxStreakLabel.text = String(challenge.maxStreak)
-        maxStreakImageView.image = #imageLiteral(resourceName: "trophy")
-        currentStreakLabel.text = String(challenge.currentStreak)
-        currentStreakImageView.image = #imageLiteral(resourceName: "fire")
+        maxStreakLabel.text = "\(String(challenge.maxStreak))d"
+        //maxStreakImageView.image = #imageLiteral(resourceName: "trophy")
+        currentStreakLabel.text = "\(String(challenge.currentStreak))d"
+        //currentStreakImageView.image = #imageLiteral(resourceName: "fire")
+        timeLeftLabel.text = "\(String(Date().hours(to: challenge.cutoffTime)))h"
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

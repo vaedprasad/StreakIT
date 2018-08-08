@@ -38,14 +38,14 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35f-xx-LQ6" customClass="KolodaView" customModule="Koloda">
                                 <rect key="frame" x="67" y="123" width="240" height="323"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="stkDarkBlue"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="dHI-3u-64r">
-                                <rect key="frame" x="67" y="480" width="240" height="96"/>
+                                <rect key="frame" x="67" y="480" width="148" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-XU-Jb1">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" image="delete_sign"/>
                                         <connections>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-YZ-i0k">
-                                        <rect key="frame" x="144" y="0.0" width="96" height="96"/>
+                                        <rect key="frame" x="98" y="0.0" width="50" height="50"/>
                                         <state key="normal" image="checkmark"/>
                                         <connections>
                                             <action selector="rightButtonTapped:" destination="lH2-oP-6V8" eventType="touchUpInside" id="fvJ-B9-HVs"/>
@@ -61,8 +61,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-KG-lIr">
+                                <rect key="frame" x="61" y="50" width="253.5" height="39.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vMN-KG-lIr" firstAttribute="centerX" secondItem="MPr-4I-36B" secondAttribute="centerX" id="nzv-zG-icL"/>
+                            <constraint firstItem="vMN-KG-lIr" firstAttribute="top" secondItem="3pw-sJ-qlM" secondAttribute="top" constant="30" id="sFa-2O-Tbl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3pw-sJ-qlM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_cards_black" id="JSo-U6-lka">
@@ -130,10 +140,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" width="96" height="96"/>
-        <image name="delete_sign" width="96" height="96"/>
+        <image name="checkmark" width="50" height="50"/>
+        <image name="delete_sign" width="50" height="50"/>
         <image name="tab_cards_black" width="50" height="50"/>
         <image name="tab_user_black" width="50" height="50"/>
+        <namedColor name="stkDarkBlue">
+            <color red="0.16899999976158142" green="0.17599999904632568" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="stkHotPink">
             <color red="0.98000001907348633" green="0.32499998807907104" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

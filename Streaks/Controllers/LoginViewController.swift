@@ -159,7 +159,7 @@ class LoginViewController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
         //self.view.backgroundColor = UIColor.stkCyan
         view.addSubview(signInWithFacebookButton)
-        signInWithFacebookButton.anchor(nil, left: view.safeAreaLayoutGuide.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 50)
+        signInWithFacebookButton.anchor(nil, left: view.safeAreaLayoutGuide.leftAnchor, bottom: view.safeAreaLayoutGuide.centerYAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 50)
         // Do any additional setup after loading the view.
     }
     
