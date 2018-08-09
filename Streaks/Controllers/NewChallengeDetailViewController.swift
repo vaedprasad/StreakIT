@@ -15,11 +15,19 @@ class NewChallengeDetailViewController: UIViewController {
     @IBOutlet weak var newChallengeIconButton: UIButton!
     
     var challenge: Challenge!
-
+    var selectedIcon: Icon?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateWithChallenge()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        updateWithChallenge()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +38,8 @@ class NewChallengeDetailViewController: UIViewController {
     func updateWithChallenge() {
         newChallengeTitleTextField.text = challenge.name
         newChallengeIconButton.imageView?.image = challenge.getIcon()
+        newChallengeIconButton.imageView?.contentMode = .scaleAspectFit
+
         
     }
     

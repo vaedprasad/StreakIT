@@ -19,8 +19,10 @@ class ChallengeDetailViewController: UIViewController {
     @IBOutlet weak var currentStreakLabel: UILabel!
     @IBOutlet weak var timeLeftImageView: UIImageView!
     @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var backgroundCardView: UIView!
     
     var challenge: Challenge!
+    var selectedChallenge: Challenge?
     
     /*init(challenge: Challenge) {
         self.challenge = challenge
@@ -37,6 +39,12 @@ class ChallengeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateWithChallenge()
+        
+        backgroundCardView.layer.cornerRadius = 8
+        //let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 8)
+        //backgroundCardView.layer.shadowPath = shadowPath.cgPath
+        backgroundCardView.layer.borderColor = UIColor.stkHotPink.cgColor
+        backgroundCardView.layer.borderWidth = 2
 
         
 
@@ -100,21 +108,35 @@ class ChallengeDetailViewController: UIViewController {
         challengeTitleTextField.text = challenge.name
         challengeIconImageView.image = challenge.getIcon()
         challengeIconImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        maxStreakLabel.text = "\(String(challenge.maxStreak))d"
+        
         maxStreakImageView.image = #imageLiteral(resourceName: "trophy")
-        currentStreakLabel.text = "\(String(challenge.currentStreak))d"
+        maxStreakLabel.text = "\(String(challenge.maxStreak))d"
+
+        
+        
         if challenge.maxStreak == challenge.currentStreak {
             currentStreakImageView.image = #imageLiteral(resourceName: "blue_fire")
         } else {
             currentStreakImageView.image = #imageLiteral(resourceName: "fire")
         }
-        if Date().hours(to: challenge.cutoffTime) > 24 {
-            timeLeftLabel.text = "Done!"
+        currentStreakLabel.text = "\(String(challenge.currentStreak))d"
+
+        
+        let now = Date()
+        if now.hours(to: challenge.cutoffTime) > 24 {
             timeLeftImageView.image = #imageLiteral(resourceName: "star")
+            timeLeftLabel.text = "Done!"
         } else {
+            if now.hours(to: challenge.cutoffTime) > 6 {
+                timeLeftImageView.image = #imageLiteral(resourceName: "sand_glass_top")
+            } else if now.hours(to: challenge.cutoffTime) >= 0 {
+                timeLeftImageView.image = #imageLiteral(resourceName: "sand_glass_bottom")
+            } else if now.hours(to: challenge.cutoffTime) < 0 {
+                timeLeftImageView.image = #imageLiteral(resourceName: "sand_glass_empty")
+            }
             timeLeftLabel.text = "\(String(Date().hours(to: challenge.cutoffTime)))h"
-            timeLeftImageView.image = #imageLiteral(resourceName: "sand_glass")
         }
+
 
 
     }
@@ -126,6 +148,16 @@ class ChallengeDetailViewController: UIViewController {
         case Constants.Segue.saveChallenge:
             print("save bar button item tapped")
             guard let challengeName = challengeTitleTextField.text else { return }
+            
+            //MARK: EXAMPLE
+            
+            //let destinationVC = segue.destination as! NewChallengeDetailViewController
+            //destinationVC.challenge = selectedChallenge
+            
+            //self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            
+            //MARK: EXAMPLE END
+            
             //guard let challengeDescription = challengeDescriptionTextView.text else { return }
             challenge.name = challengeName
             //challenge.description = challengeDescription

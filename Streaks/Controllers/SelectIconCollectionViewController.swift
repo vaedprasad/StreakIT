@@ -13,16 +13,6 @@ private let reuseIdentifier = "IconCell"
 //proto
 
 class SelectIconCollectionViewController: UICollectionViewController {
-
-    let icons = [
-        Icon(iconName: "Pushups", iconImageIdentifier: "pushups"),
-        Icon(iconName: "Swimming", iconImageIdentifier: "pushups"),
-        Icon(iconName: "Jumping", iconImageIdentifier: "pushups"),
-        Icon(iconName: "Eating", iconImageIdentifier: "pushups"),
-        Icon(iconName: "Playing", iconImageIdentifier: "pushups")
-    ]
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,14 +51,14 @@ class SelectIconCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return icons.count
+        return Constants.Icons.newChallengeIcons.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IconCollectionViewCell
     
-        cell.iconImageView.image = icons[indexPath.row].getIcon()
-        cell.iconLabel.text = icons[indexPath.row].iconName
+        cell.iconImageView.image = Constants.Icons.newChallengeIcons[indexPath.row].getIcon()
+        cell.iconLabel.text = Constants.Icons.newChallengeIcons[indexPath.row].iconName
         cell.layer.cornerRadius = 8
         cell.layer.borderColor = UIColor.stkHotPink.cgColor
         cell.layer.borderWidth = 0.5

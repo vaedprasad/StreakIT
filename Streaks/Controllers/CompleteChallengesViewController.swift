@@ -9,35 +9,37 @@
 import UIKit
 import Koloda
 
-private var numberOfCards: Int = 5
-
-
 class CompleteChallengesViewController: UIViewController {
     @IBOutlet weak var kolodaView: KolodaView!
     //var currentUser: CurrentUser?
-
+    @IBOutlet weak var ChallengeNameLabel: UILabel!
     
-    fileprivate var dataSource: [UIImage] = {
-        //var challenges = ChallengeService.getChallenges(for: CurrentUser.current, completion: { (challenges) in
-            //
-        //})
-        var array: [UIImage] = []
-        for index in 0..<numberOfCards {
-            //array.append(UIImage(named: "Card_like_\(index + 1)")!)
-        }
-        
-        return array
-    }()
+    
+    fileprivate var dataSource: [UIImage] = []
     
     var images: [UIImage] = [#imageLiteral(resourceName: "pushups"),#imageLiteral(resourceName: "squats"), #imageLiteral(resourceName: "treadmill")]
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
-        //kolodaView.layer.cornerRadius = 8;
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.layer.cornerRadius = 8
+        
+        //var uncompletedChallenges: [UIImage] = []
+        ChallengeService.getChallenges(for: CurrentUser.current, completion: { (challenges) in
+            for c in challenges {
+                if Date().hours(to: c.cutoffTime) < 24 {
+                    self.dataSource.append(c.getIcon())
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.kolodaView.reloadData()
+            }
+        })
+        
+
 
         // Do any additional setup after loading the view.
     }
@@ -74,7 +76,7 @@ extension CompleteChallengesViewController: KolodaViewDelegate {
 extension CompleteChallengesViewController: KolodaViewDataSource {
 
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return images.count
+        return dataSource.count
     }
 
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
@@ -82,7 +84,8 @@ extension CompleteChallengesViewController: KolodaViewDataSource {
     }
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: images[index])
+        //return UIImageView(image: dataSource?[index])
+        return UIImageView(image: dataSource[index])
     }
 
 //    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

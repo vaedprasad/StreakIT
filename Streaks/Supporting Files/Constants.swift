@@ -40,4 +40,14 @@ struct Constants {
                 ])
         ]
     }
+    struct Icons {
+        static let newChallengeIcons = [
+            Icon(iconName: "Pushups", iconImageIdentifier: "pushups"),
+            Icon(iconName: "Swimming", iconImageIdentifier: "swimming"),
+            Icon(iconName: "No Smoking", iconImageIdentifier: "no_smoking"),
+            Icon(iconName: "Dog", iconImageIdentifier: "dog"),
+            Icon(iconName: "Walking", iconImageIdentifier: "walking")
+        ]
+    }
+    
 }

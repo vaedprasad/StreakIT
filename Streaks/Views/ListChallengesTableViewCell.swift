@@ -34,10 +34,15 @@ class ListChallengesTableViewCell: UITableViewCell {
         challengeSubtitleLabel.text = getCellSubtitle(maxStreak: challenge.maxStreak, currentStreak: challenge.currentStreak)
         challengeImageView.image = challenge.getIcon()
         
-        if Date().hours(to: challenge.cutoffTime) > 24 {
+        let now = Date()
+        if now.hours(to: challenge.cutoffTime) > 24 {
             challengeStatusImageView.image = #imageLiteral(resourceName: "star")
-        } else {
-            challengeStatusImageView.image = #imageLiteral(resourceName: "sand_glass")
+        } else if now.hours(to: challenge.cutoffTime) > 6{
+            challengeStatusImageView.image = #imageLiteral(resourceName: "sand_glass_top")
+        } else if now.hours(to: challenge.cutoffTime) >= 0{
+            challengeStatusImageView.image = #imageLiteral(resourceName: "sand_glass_bottom")
+        } else if now.hours(to: challenge.cutoffTime) < 0{
+            challengeStatusImageView.image = #imageLiteral(resourceName: "sand_glass_empty")
         }
         
         cardView.layer.cornerRadius = 8
