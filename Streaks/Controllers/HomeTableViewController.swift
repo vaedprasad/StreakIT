@@ -16,7 +16,10 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
         self.view.backgroundColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.black // your color
+
         //self.tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
         self.tableView.separatorColor = UIColor.stkHotPink//UIColor(white: 0.95, alpha: 1)
         navigationItem.title = "Challenges"

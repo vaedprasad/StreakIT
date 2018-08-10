@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60084B3211D221600C8633D /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60084B2211D221600C8633D /* SearchCollectionReusableView.swift */; };
 		A6233163210649C700CD05ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6233162210649C700CD05ED /* AppDelegate.swift */; };
 		A6233168210649C700CD05ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6233166210649C700CD05ED /* Main.storyboard */; };
 		A623316D210649CA00CD05ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623316B210649CA00CD05ED /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		65FEA0B2D3AAD5664012F389 /* Pods-Streaks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Streaks/Pods-Streaks.debug.xcconfig"; sourceTree = "<group>"; };
 		8793E87ABA54AB49A1A93D13 /* Pods_Streaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Streaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60084B2211D221600C8633D /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
 		A623315F210649C700CD05ED /* Streaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6233162210649C700CD05ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6233167210649C700CD05ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */,
 				A6994FA32110F7D800CAA8F7 /* CardDesignView.swift */,
 				A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */,
+				A60084B2211D221600C8633D /* SearchCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				A682566F210BB97100AD4FF7 /* ListNewChallengesTableViewController.swift in Sources */,
 				A6994FAC211263AC00CAA8F7 /* Storyboard+Utility.swift in Sources */,
 				A6994FA821122B1B00CAA8F7 /* ChallengeService.swift in Sources */,
+				A60084B3211D221600C8633D /* SearchCollectionReusableView.swift in Sources */,
 				A6994FA42110F7D800CAA8F7 /* CardDesignView.swift in Sources */,
 				A682566D210BB46D00AD4FF7 /* ListChallengesTableViewCell.swift in Sources */,
 				A6760ED92107E58D002F4854 /* FBService.swift in Sources */,

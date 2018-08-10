@@ -96,6 +96,9 @@ class ChallengeDetailViewController: UIViewController {
     func updateWithChallenge() {
         if challenge.isStreakExpired() {
             challenge.resetStreak()
+            ChallengeService.updateChallenge(challenge: challenge) { (updatedChallenge) in
+                //do anything with updated challenge
+            }
             let alert = UIAlertController(title: "Streak Reset", message: "You did not complete your streak yesterday so your streak has been reset.", preferredStyle: UIAlertControllerStyle.alert)
             
             // add the actions (buttons)

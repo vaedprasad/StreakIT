@@ -20,6 +20,7 @@ class Icon {
     
     func getIcon() -> UIImage {
         guard let image = UIImage(named: "\(iconImageIdentifier)") else {
+            print(iconName)
             fatalError("icon image not found for the name: \(iconImageIdentifier)")
         }
         return image
