@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A60084B3211D221600C8633D /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60084B2211D221600C8633D /* SearchCollectionReusableView.swift */; };
+		A60084B7211E533200C8633D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A60084B6211E533200C8633D /* GoogleService-Info.plist */; };
 		A6233163210649C700CD05ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6233162210649C700CD05ED /* AppDelegate.swift */; };
 		A6233168210649C700CD05ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6233166210649C700CD05ED /* Main.storyboard */; };
 		A623316D210649CA00CD05ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623316B210649CA00CD05ED /* LaunchScreen.storyboard */; };
-		A62331762106565B00CD05ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A62331752106565B00CD05ED /* GoogleService-Info.plist */; };
 		A623317F2106581D00CD05ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623317E2106581D00CD05ED /* Login.storyboard */; };
 		A62331812106587000CD05ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62331802106587000CD05ED /* LoginViewController.swift */; };
 		A623318321065A0D00CD05ED /* UIColor+STK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623318221065A0D00CD05ED /* UIColor+STK.swift */; };
@@ -55,12 +55,12 @@
 		65FEA0B2D3AAD5664012F389 /* Pods-Streaks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Streaks/Pods-Streaks.debug.xcconfig"; sourceTree = "<group>"; };
 		8793E87ABA54AB49A1A93D13 /* Pods_Streaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Streaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60084B2211D221600C8633D /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
+		A60084B6211E533200C8633D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A623315F210649C700CD05ED /* Streaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6233162210649C700CD05ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6233167210649C700CD05ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A623316C210649CA00CD05ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A623316E210649CA00CD05ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A62331752106565B00CD05ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A623317E2106581D00CD05ED /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A62331802106587000CD05ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A623318221065A0D00CD05ED /* UIColor+STK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+STK.swift"; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A623316E210649CA00CD05ED /* Info.plist */,
-				A62331752106565B00CD05ED /* GoogleService-Info.plist */,
+				A60084B6211E533200C8633D /* GoogleService-Info.plist */,
 				A623318221065A0D00CD05ED /* UIColor+STK.swift */,
 				A6994FA521112B0900CAA8F7 /* Constants.swift */,
 			);
@@ -334,7 +334,6 @@
 				A623319F21067F2E00CD05ED /* OstrichSans-Bold.otf in Resources */,
 				A62331A121067F2E00CD05ED /* OstrichSans-Heavy.otf in Resources */,
 				A6736CB8211A30A70022C023 /* Gotham-Rounded-Bold.otf in Resources */,
-				A62331762106565B00CD05ED /* GoogleService-Info.plist in Resources */,
 				A678689B211B782000EEB73D /* gotham-rounded-book.otf in Resources */,
 				A62331A221067F2E00CD05ED /* OstrichSans-Medium.otf in Resources */,
 				A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */,
@@ -342,6 +341,7 @@
 				A62331A321067F2E00CD05ED /* OstrichSans-Light.otf in Resources */,
 				A623319D21067F2E00CD05ED /* ostrich-regular.ttf in Resources */,
 				A623317F2106581D00CD05ED /* Login.storyboard in Resources */,
+				A60084B7211E533200C8633D /* GoogleService-Info.plist in Resources */,
 				A678689A211B782000EEB73D /* gotham-rounded-medium.otf in Resources */,
 				A62331A021067F2E00CD05ED /* OstrichSansDashed-Medium.otf in Resources */,
 				A62331A421067F2E00CD05ED /* OstrichSansRounded-Medium.otf in Resources */,
@@ -616,16 +616,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Y5NHAS98;
+				DEVELOPMENT_TEAM = TF67RE3WWL;
 				INFOPLIST_FILE = "$(SRCROOT)/Streaks/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vaedprasad.Streaks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaedprasad.StreakITapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -635,16 +636,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38Y5NHAS98;
+				DEVELOPMENT_TEAM = TF67RE3WWL;
 				INFOPLIST_FILE = "$(SRCROOT)/Streaks/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vaedprasad.Streaks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaedprasad.StreakITapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

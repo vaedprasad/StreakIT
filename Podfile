@@ -16,5 +16,6 @@ target 'Streaks' do
   pod 'JGProgressHUD'
   pod 'SwiftyJSON'
   pod 'LBTAComponents'
+  pod 'Firebase/Analytics'
 
 end
