@@ -68,8 +68,6 @@ StreakIt will save users basic profile information (name, username, password, em
 Login/Create-Username View Controllers
 * `LoginViewController.swift`
 	*  User can login using Firebase Authentication
-* `TabBarViewController.swift`
-	*  3 Tab View Controller
 * `HomeTableViewController.swift`
 	* User can view all their active challenges
 * `ChallengeDetailViewController.swift`
@@ -82,6 +80,8 @@ Login/Create-Username View Controllers
 	* Use KolodaView to complete challenges with a Tinder-esque card swiping UX
 * `UserProfileViewController.swift`
 	* Display user profile including profile image, name, username, etc.
+* `SelectIconCollectionViewController.swift`
+	* Display collection of icons for user to select
 	
 ## Other
 
