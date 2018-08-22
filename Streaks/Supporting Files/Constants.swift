@@ -10,7 +10,8 @@ import Foundation
 
 struct Constants {
     struct Segue {
-        static let toChallengeDetail = "toChallengeDetail"
+        static let toChallengeDetailFromHome = "toChallengeDetailFromHome"
+        static let toChallengeDetailFromKoloda = "toChallengeDetailFromKoloda"
         static let toNewChallengeDetail = "toNewChallengeDetail"
         static let toCreateChallenge = "toCreateChallenge"
         static let saveChallenge = "saveChallenge"

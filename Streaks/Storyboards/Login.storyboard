@@ -4,18 +4,11 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Gotham-Rounded-Bold.otf">
-            <string>GothamRounded-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="7nm-Fe-ajQ">
@@ -25,37 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-GB-yKw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_3" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-GB-yKw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreakIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SK-or-w6N">
-                                <rect key="frame" x="78" y="60" width="220" height="52"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="52"/>
-                                <color key="textColor" name="stkWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_white" translatesAutoresizingMaskIntoConstraints="NO" id="nZ6-Tc-JoW">
-                                <rect key="frame" x="123.5" y="127" width="128" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_text" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-E1-NnK">
+                                <rect key="frame" x="87" y="170" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="nZ6-Tc-JoW" secondAttribute="height" multiplier="1:1" id="F7F-HX-ked"/>
-                                    <constraint firstAttribute="width" constant="128" id="K06-Ga-4sf"/>
-                                    <constraint firstAttribute="height" constant="128" id="r4K-4x-8pl"/>
+                                    <constraint firstAttribute="width" constant="200" id="7aM-WM-77J"/>
+                                    <constraint firstAttribute="height" constant="200" id="Jwe-NZ-TZ6"/>
+                                    <constraint firstAttribute="width" secondItem="uzX-E1-NnK" secondAttribute="height" multiplier="1:1" id="NGL-CJ-IhA"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="nZ6-Tc-JoW" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="4jK-fI-PZr"/>
+                            <constraint firstItem="uzX-E1-NnK" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="Iwy-qH-xUS"/>
+                            <constraint firstItem="uzX-E1-NnK" firstAttribute="top" secondItem="DXT-Rt-dPt" secondAttribute="top" constant="150" id="bWJ-1u-MDP"/>
                             <constraint firstItem="Mdr-GB-yKw" firstAttribute="leading" secondItem="LZH-87-6hN" secondAttribute="leading" id="bZa-5s-jBr"/>
                             <constraint firstAttribute="bottom" secondItem="Mdr-GB-yKw" secondAttribute="bottom" id="cXP-UJ-ZKD"/>
                             <constraint firstItem="Mdr-GB-yKw" firstAttribute="top" secondItem="LZH-87-6hN" secondAttribute="top" id="lw4-vL-KPw"/>
-                            <constraint firstItem="nZ6-Tc-JoW" firstAttribute="top" secondItem="1SK-or-w6N" secondAttribute="bottom" constant="15" id="n8a-Uc-azw"/>
-                            <constraint firstItem="1SK-or-w6N" firstAttribute="top" secondItem="DXT-Rt-dPt" secondAttribute="top" constant="40" id="qey-PF-JhH"/>
                             <constraint firstAttribute="trailing" secondItem="Mdr-GB-yKw" secondAttribute="trailing" id="tzA-Up-07m"/>
-                            <constraint firstItem="1SK-or-w6N" firstAttribute="centerX" secondItem="LZH-87-6hN" secondAttribute="centerX" id="ucG-R3-Z6P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DXT-Rt-dPt"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="Mdr-GB-yKw" id="mi7-bU-eaj"/>
+                        <outlet property="iconImageView" destination="uzX-E1-NnK" id="lCJ-ds-Cnk"/>
                         <segue destination="wx9-Ue-ykc" kind="show" identifier="ToMain" id="SoR-OP-vTM"/>
                     </connections>
                 </viewController>
@@ -73,10 +60,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gradient" width="885" height="1804"/>
-        <image name="icon_white" width="547" height="617"/>
-        <namedColor name="stkWhite">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="gradient_3" width="480" height="978"/>
+        <image name="icon_text" width="326" height="326"/>
     </resources>
 </document>

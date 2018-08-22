@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gAS-Oh-tcN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="pm1-Zs-y9E">
+            <objects>
+                <viewController id="gAS-Oh-tcN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CGB-00-lBB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-UK-37l">
+                                <rect key="frame" x="35" y="563" width="305" height="44"/>
+                                <color key="backgroundColor" name="stkHotPink"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tlh-sW-tlS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="haN-nZ-c9l" kind="show" id="5Ia-Jl-OKy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28627450980392155" green="0.29803921568627451" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HRp-lc-Vfq" firstAttribute="trailing" secondItem="oc0-UK-37l" secondAttribute="trailing" constant="35" id="he5-v9-awl"/>
+                            <constraint firstItem="HRp-lc-Vfq" firstAttribute="bottom" secondItem="oc0-UK-37l" secondAttribute="bottom" constant="60" id="l7V-vZ-nKP"/>
+                            <constraint firstItem="oc0-UK-37l" firstAttribute="leading" secondItem="HRp-lc-Vfq" secondAttribute="leading" constant="35" id="yBd-a4-iuF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HRp-lc-Vfq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAa-Tu-Prr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="218.1409295352324"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qW7-w8-s8u">
+            <objects>
+                <viewController id="haN-nZ-c9l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqk-7l-4GB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-XY-KX5">
+                                <rect key="frame" x="35" y="568" width="305" height="44"/>
+                                <color key="backgroundColor" name="stkHotPink"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="9NA-gB-kwC"/>
+                                    <constraint firstAttribute="height" constant="44" id="dny-1O-tlw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihy-yt-KWB">
+                                <rect key="frame" x="35" y="122" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28627450980000002" green="0.29803921570000003" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YLA-vC-5fd" firstAttribute="trailing" secondItem="U6b-XY-KX5" secondAttribute="trailing" constant="35" id="P3F-KW-bjE"/>
+                            <constraint firstItem="YLA-vC-5fd" firstAttribute="bottom" secondItem="U6b-XY-KX5" secondAttribute="bottom" constant="55" id="az8-5D-ZHU"/>
+                            <constraint firstItem="U6b-XY-KX5" firstAttribute="leading" secondItem="YLA-vC-5fd" secondAttribute="leading" constant="35" id="sqS-2h-ea8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YLA-vC-5fd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBm-Jm-YKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="220"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="stkHotPink">
+            <color red="0.98000001907348633" green="0.32499998807907104" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

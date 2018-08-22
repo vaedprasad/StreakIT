@@ -154,7 +154,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="vrN-o5-jCz" kind="show" identifier="toChallengeDetail" id="9WC-nN-IMD"/>
+                        <segue destination="vrN-o5-jCz" kind="show" identifier="toChallengeDetailFromHome" id="9WC-nN-IMD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lax-gK-uui" userLabel="First Responder" sceneMemberID="firstResponder"/>

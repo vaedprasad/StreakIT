@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,25 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-dz-tny">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_3" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-dz-tny">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_white" translatesAutoresizingMaskIntoConstraints="NO" id="OhV-Ug-Zzv">
-                                <rect key="frame" x="110" y="160" width="235" height="343"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_text" translatesAutoresizingMaskIntoConstraints="NO" id="ZfN-kQ-gD0">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="0bt-er-moP"/>
-                                    <constraint firstAttribute="height" constant="343" id="sfN-DX-sEo"/>
+                                    <constraint firstAttribute="width" constant="250" id="PcN-is-SLv"/>
+                                    <constraint firstAttribute="height" constant="250" id="mSg-yr-Qn1"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OhV-Ug-Zzv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="Ds4-7h-oGu"/>
                             <constraint firstAttribute="bottom" secondItem="hDk-dz-tny" secondAttribute="bottom" id="OkK-94-ibG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OhV-Ug-Zzv" secondAttribute="trailing" constant="30" id="UhQ-68-MOF"/>
                             <constraint firstAttribute="trailing" secondItem="hDk-dz-tny" secondAttribute="trailing" id="dry-Dh-xnO"/>
                             <constraint firstItem="hDk-dz-tny" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="mBJ-Xo-YQz"/>
+                            <constraint firstItem="ZfN-kQ-gD0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uge-gg-6FU"/>
                             <constraint firstItem="hDk-dz-tny" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xGI-Fg-saq"/>
+                            <constraint firstItem="ZfN-kQ-gD0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="y2g-g1-HxC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,7 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gradient" width="885" height="1804"/>
-        <image name="icon_white" width="547" height="617"/>
+        <image name="gradient_3" width="480" height="978"/>
+        <image name="icon_text" width="326" height="326"/>
     </resources>
 </document>

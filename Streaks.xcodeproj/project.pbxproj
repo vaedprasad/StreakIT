@@ -23,6 +23,7 @@
 		A62331A221067F2E00CD05ED /* OstrichSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319A21067F2E00CD05ED /* OstrichSans-Medium.otf */; };
 		A62331A321067F2E00CD05ED /* OstrichSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319B21067F2E00CD05ED /* OstrichSans-Light.otf */; };
 		A62331A421067F2E00CD05ED /* OstrichSansRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */; };
+		A62CAC412122A7C5006DD5AC /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62CAC402122A7C4006DD5AC /* Tutorial.storyboard */; };
 		A644BC48210F923100E48E43 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */; };
 		A644BC4A210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */; };
 		A65915282118CF0100566FE7 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */; };
@@ -72,6 +73,7 @@
 		A623319A21067F2E00CD05ED /* OstrichSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Medium.otf"; sourceTree = "<group>"; };
 		A623319B21067F2E00CD05ED /* OstrichSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Light.otf"; sourceTree = "<group>"; };
 		A623319C21067F2E00CD05ED /* OstrichSansRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSansRounded-Medium.otf"; sourceTree = "<group>"; };
+		A62CAC402122A7C4006DD5AC /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		A644BC47210F923100E48E43 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
 		A644BC49210FA9C600E48E43 /* ListNewChallengesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		A65915272118CF0100566FE7 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				A6233166210649C700CD05ED /* Main.storyboard */,
 				A623316B210649CA00CD05ED /* LaunchScreen.storyboard */,
 				A623317E2106581D00CD05ED /* Login.storyboard */,
+				A62CAC402122A7C4006DD5AC /* Tutorial.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				A6760ECC210794EB002F4854 /* Assets.xcassets in Resources */,
 				A6760ED121079F3B002F4854 /* Home.storyboard in Resources */,
 				A62331A321067F2E00CD05ED /* OstrichSans-Light.otf in Resources */,
+				A62CAC412122A7C5006DD5AC /* Tutorial.storyboard in Resources */,
 				A623319D21067F2E00CD05ED /* ostrich-regular.ttf in Resources */,
 				A623317F2106581D00CD05ED /* Login.storyboard in Resources */,
 				A60084B7211E533200C8633D /* GoogleService-Info.plist in Resources */,

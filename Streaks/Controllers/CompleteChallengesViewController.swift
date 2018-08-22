@@ -11,7 +11,6 @@ import Koloda
 
 class CompleteChallengesViewController: UIViewController {
     @IBOutlet weak var kolodaView: KolodaView!
-    //var currentUser: CurrentUser?
     @IBOutlet weak var ChallengeNameLabel: UILabel!
     
     var lastChallengeSelected: Challenge?
@@ -31,12 +30,7 @@ class CompleteChallengesViewController: UIViewController {
         //kolodaView.layer.borderColor = UIColor.stkHotPink.cgColor
         //kolodaView.layer.borderWidth = 2
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
         
-        //var uncompletedChallenges: [UIImage] = []
         dataSource = []
         ChallengeService.getChallenges(for: CurrentUser.current, completion: { (challenges) in
             for c in challenges {
@@ -49,6 +43,14 @@ class CompleteChallengesViewController: UIViewController {
                 self.kolodaView.reloadData()
             }
         })
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        //var uncompletedChallenges: [UIImage] = []
+
     }
 
     @IBAction func tappedRefreshButton(_ sender: Any) {
@@ -103,7 +105,11 @@ extension CompleteChallengesViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         //UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
         //openURL:options:completionHandler:
-        print("card selected")
+        //print("card selected")
+        lastChallengeSelected = dataSource[index]
+        self.performSegue(withIdentifier: Constants.Segue.toChallengeDetailFromKoloda, sender: self)
+
+        
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
@@ -114,10 +120,10 @@ extension CompleteChallengesViewController: KolodaViewDelegate {
             
             // add the actions (buttons)
             alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.destructive, handler: { action in
-                self.dataSource[index].resetStreak()
-                ChallengeService.updateChallenge(challenge: self.dataSource[index]) { (updatedChallenge) in
+                //self.dataSource[index].resetStreak()
+                //ChallengeService.updateChallenge(challenge: self.dataSource[index]) { (updatedChallenge) in
                     //
-                }
+                //}
                 
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
@@ -158,6 +164,24 @@ extension CompleteChallengesViewController: KolodaViewDataSource {
         imageView.layer.borderWidth = 2
         return imageView
 
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        guard let identifier = segue.identifier else { return }
+        
+        // 2
+        if identifier == Constants.Segue.toChallengeDetailFromKoloda {
+            let destination = segue.destination as! ChallengeDetailViewController
+            destination.challenge = self.lastChallengeSelected
+            
+        }
+    }
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        //set challenges
     }
     
 

@@ -18,19 +18,27 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
         self.view.backgroundColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.black // your color
+        //UITabBar.appearance().barTintColor = UIColor.black // your color
 
         //self.tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        self.tableView.separatorColor = UIColor.stkHotPink//UIColor(white: 0.95, alpha: 1)
+        //self.tableView.separatorColor = UIColor.stkHotPink//UIColor(white: 0.95, alpha: 1)
         navigationItem.title = "Challenges"
         currentUser = CurrentUser.current
-        //print(currentUser)
         ChallengeService.getChallenges(for: currentUser!) { (challenges) in
             self.challenges = challenges
             self.tableView.reloadData()
-            print(self.challenges.count)
+            if challenges.count == 0 {
+                let alert = UIAlertController(title: "Create a Challenge", message: "Click the '+' icon on the top right of your screen to create a challenge.", preferredStyle: UIAlertControllerStyle.alert)
+                
+                // add the actions (buttons)
+                alert.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.cancel, handler: nil))
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            }
         }
         
+
         //newChallenges.append(NewChallenges(sectionName: "Custom Challenge", isCustom: true, sectionChallenges: [Challenge(name: "Create Your Own Challenge", description: "Create Your Custom Challenge", icon: "pushups", currentStreak: 0, maxStreak: 0, creator: user)]))
 //        challenges = API.getChallenges()
         // Uncomment the following line to preserve selection between presentations
@@ -84,7 +92,7 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         lastChallengeSelected = challenges[indexPath.row]
-        self.performSegue(withIdentifier: Constants.Segue.toChallengeDetail, sender: self)
+        self.performSegue(withIdentifier: Constants.Segue.toChallengeDetailFromHome, sender: self)
         
         
         
@@ -167,7 +175,7 @@ class HomeTableViewController: UITableViewController {
         guard let identifier = segue.identifier else { return }
         
         // 2
-        if identifier == Constants.Segue.toChallengeDetail {
+        if identifier == Constants.Segue.toChallengeDetailFromHome {
             let destination = segue.destination as! ChallengeDetailViewController
             destination.challenge = self.lastChallengeSelected
             
